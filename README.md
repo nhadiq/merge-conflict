@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 0 · 2026-04-12 15:20 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 0 · 2026-04-12 15:22 UTC**
 
 ---
 
@@ -16,7 +16,7 @@
      X  Y  Z  A  B  C  D 
   ┌──────────────────────┐
 -3│ 🏛️ 🌊 🗿 ⬜ 🌊 ❄️ 🌴 │
--2│ 🏜️ 🔴 🌲 ⛰️ ⬜ ⛰️ 🏰 │
+-2│ 🏜️ 🔴 🔴 ⛰️ ⬜ ⛰️ 🏰 │
 -1│ 🔺 🌲 ⛰️ 🌲 ⬜ 🏛️ 🌾 │
  0│ 🏛️ 🏜️ ⬜ 🌴 ⬜ 🌲 🌾 │
  1│ 🏜️ 🌴 🏜️ 🌲 🏜️ 🏜️ ⛰️ │
@@ -26,11 +26,11 @@
 ```
 
 **Active Biomes**
+- 🌿🟫🌆 **The Southern Wilds**
+- 🏜️🔺🌴 **The Ancient Nile**
 - 🌾🛣️🏰 **The Eastern Steppes**
 - ❄️🌊⛰️ **The Frozen North**
 - ⬜🌲⛰️ **The Ancient Heartland**
-- 🌿🟫🌆 **The Southern Wilds**
-- 🏜️🔺🌴 **The Ancient Nile**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -43,7 +43,7 @@
 | | X | Y | Z | A | B | C | D |
 |---|---|---|---|---|---|---|---|
 | **-3** | [🏛️](../../issues/new?template=attack.yml&title=ATTACK+-3+-3) | 🌊 | [🗿](../../issues/new?template=attack.yml&title=ATTACK+-3+-1) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+-3+0) | 🌊 | [❄️](../../issues/new?template=attack.yml&title=ATTACK+-3+2) | [🌴](../../issues/new?template=attack.yml&title=ATTACK+-3+3) |
-| **-2** | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+-2+-3) | [🔴](../../issues/new?template=attack.yml&title=ATTACK+-2+-2) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+-2+-1) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+-2+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+-2+1) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+-2+2) | [🏰](../../issues/new?template=attack.yml&title=ATTACK+-2+3) |
+| **-2** | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+-2+-3) | [🔴](../../issues/new?template=attack.yml&title=ATTACK+-2+-2) | [🔴](../../issues/new?template=attack.yml&title=ATTACK+-2+-1) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+-2+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+-2+1) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+-2+2) | [🏰](../../issues/new?template=attack.yml&title=ATTACK+-2+3) |
 | **-1** | [🔺](../../issues/new?template=attack.yml&title=ATTACK+-1+-3) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+-1+-2) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+-1+-1) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+-1+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+-1+1) | [🏛️](../../issues/new?template=attack.yml&title=ATTACK+-1+2) | [🌾](../../issues/new?template=attack.yml&title=ATTACK+-1+3) |
 | **0** | [🏛️](../../issues/new?template=attack.yml&title=ATTACK+0+-3) | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+0+-2) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+0+-1) | [🌴](../../issues/new?template=attack.yml&title=ATTACK+0+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+0+1) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+0+2) | [🌾](../../issues/new?template=attack.yml&title=ATTACK+0+3) |
 | **1** | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+1+-3) | [🌴](../../issues/new?template=attack.yml&title=ATTACK+1+-2) | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+1+-1) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+1+0) | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+1+1) | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+1+2) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+1+3) |
@@ -56,7 +56,7 @@
 
 | Rank | Banner | Civilization | Founder | Warriors | Territories | Wonders | Score |
 |------|--------|-------------|---------|----------|-------------|---------|-------|
-| 🥇 | 🔴 | **Glitch** | @nhadiq | 1 | 1 | 0 | **0** |
+| 🥇 | 🔴 | **Glitch** | @nhadiq | 1 | 2 | 0 | **0** |
 
 ---
 
@@ -65,7 +65,7 @@
 | Stat | Value |
 |------|-------|
 | 🌍 World size | 7×7 (49 tiles) |
-| ⚔️ Claimed | 1 tiles (2.0%) |
+| ⚔️ Claimed | 2 tiles (4.1%) |
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
@@ -77,7 +77,7 @@
 
 ### 1 — Choose your side
 
-- 🔴 **Glitch** — 1 warriors, 1 territories · [Join](../../issues/new?template=join_faction.yml&title=JOIN+glitch)
+- 🔴 **Glitch** — 1 warriors, 2 territories · [Join](../../issues/new?template=join_faction.yml&title=JOIN+glitch)
 
 [⚔️ **Found your own civilization →**](../../issues/new?template=found_faction.yml)
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-04-12 15:22 UTC` — 🏴 🔴 **Glitch** claimed **Z-2** (Forest)
 - `2026-04-12 14:58 UTC` — 🏛️ **Glitch** rises from the earth! Founded by @nhadiq 🔴
 - `2026-04-12 14:58 UTC` — 🌍 **The known world expands!** 24 new territories emerge beyond the frontier. Radius: 3 tiles.
 
