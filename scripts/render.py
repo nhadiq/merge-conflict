@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-render.py — Scalable README renderer for realm.md v2
+render.py — Scalable README renderer for merge-conflict v2
 Handles infinite maps by rendering a viewport window.
 Shows clickable attack grid, live leaderboard, world stats.
 """
@@ -259,7 +259,7 @@ def render_readme(state):
     join_links   = render_join_links(state)
     biome_legend = render_biome_legend(state)
 
-    return f"""# ⚔️ realm.md — The Infinite War
+    return f"""# ⚔️ merge-conflict — The Infinite War
 
 > An endless civilization game that lives entirely on GitHub.
 > Your code is your army. Your commits are your soldiers.
@@ -370,7 +370,7 @@ Factions that lose all territory dissolve after 7 days. Their lands are free for
 
 ---
 
-<sub>⚔️ realm.md — Built on GitHub Actions · Zero install · Zero sign-up · Just GitHub<br>
+<sub>⚔️ merge-conflict — Built on GitHub Actions · Zero install · Zero sign-up · Just GitHub<br>
 Made by <a href="https://github.com/nhadiq">@nhadiq</a> · Star to support the project · Fork to study the engine</sub>
 """
 

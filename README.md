@@ -1,10 +1,10 @@
-# ⚔️ realm.md — The Infinite War
+# ⚔️ merge-conflict — The Infinite War
 
 > An endless civilization game that lives entirely on GitHub.
 > Your code is your army. Your commits are your soldiers.
 > The world grows as the community grows.
 
-**1 warriors · 1 civilizations · 7×7 world · Age 0 · 2026-04-12 14:58 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 0 · 2026-04-12 15:17 UTC**
 
 ---
 
@@ -26,9 +26,9 @@
 **Active Biomes**
 - ❄️🌊⛰️ **The Frozen North**
 - 🌾🛣️🏰 **The Eastern Steppes**
-- 🌿🟫🌆 **The Southern Wilds**
 - 🏜️🔺🌴 **The Ancient Nile**
 - ⬜🌲⛰️ **The Ancient Heartland**
+- 🌿🟫🌆 **The Southern Wilds**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -151,5 +151,5 @@ Factions that lose all territory dissolve after 7 days. Their lands are free for
 
 ---
 
-<sub>⚔️ realm.md — Built on GitHub Actions · Zero install · Zero sign-up · Just GitHub<br>
+<sub>⚔️ merge-conflict — Built on GitHub Actions · Zero install · Zero sign-up · Just GitHub<br>
 Made by <a href="https://github.com/nhadiq">@nhadiq</a> · Star to support the project · Fork to study the engine</sub>

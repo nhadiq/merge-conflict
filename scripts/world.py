@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-world.py — Infinite procedural world generator for realm.md
+world.py — Infinite procedural world generator for merge-conflict
 Tiles are generated on-demand using deterministic noise.
 Biomes expand outward with cultural themes based on direction.
 """

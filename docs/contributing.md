@@ -6,7 +6,7 @@
 
 ```bash
 git clone https://github.com/your-username/realm-v2
-cd realm-v2
+cd merge-conflict
 python scripts/render.py           # Render README from current state
 python scripts/engine.py tick      # Run a world tick
 python scripts/gh_stats.py your-username  # Test stat fetching

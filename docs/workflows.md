@@ -10,7 +10,7 @@ on:
     types: [opened]
 
 concurrency:
-  group: realm-update
+  group: merge-conflict-update
   cancel-in-progress: false     # Queue moves, don't drop them
 ```
 
@@ -71,7 +71,7 @@ The tick workflow skips the commit entirely if nothing changed.
 
 ## Concurrency
 
-Both workflows share the same concurrency group `realm-update`. GitHub Actions serializes all runs — one active, one queued. `cancel-in-progress: false` ensures no move is silently dropped.
+Both workflows share the same concurrency group `merge-conflict-update`. GitHub Actions serializes all runs — one active, one queued. `cancel-in-progress: false` ensures no move is silently dropped.
 
 **Worst case:** A player submits a move during a world tick. Their move queues and runs immediately after the tick completes. Total delay is at most ~30 seconds.
 

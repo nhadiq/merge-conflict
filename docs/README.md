@@ -1,4 +1,4 @@
-# realm-v2 — Documentation Index
+# merge-conflict — Documentation Index
 
 This folder is the **single source of truth** for all technical documentation about the project.
 

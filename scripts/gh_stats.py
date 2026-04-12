@@ -9,7 +9,7 @@ GH_API = "https://api.github.com"
 def fetch(url, token=None):
     req = urllib.request.Request(url)
     req.add_header("Accept", "application/vnd.github+json")
-    req.add_header("User-Agent", "realm.md-game")
+    req.add_header("User-Agent", "merge-conflict-game")
     if token:
         req.add_header("Authorization", f"Bearer {token}")
     try:

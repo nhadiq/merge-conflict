@@ -1,9 +1,9 @@
 ---
-description: Core project conventions for realm-v2 — always read docs before changing code
+description: Core project conventions for merge-conflict — always read docs before changing code
 alwaysApply: true
 ---
 
-# realm-v2 Project Rules
+# merge-conflict Project Rules
 
 ## Read Docs Before Changing Code
 

@@ -5,7 +5,7 @@ on:
     types: [opened]
 
 concurrency:
-  group: realm-update
+  group: merge-conflict-update
   cancel-in-progress: false
 
 permissions:
@@ -41,10 +41,10 @@ jobs:
       - name: Commit updated state and README
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "⚔️ realm update: ${{ github.event.issue.title }} by @${{ github.event.issue.user.login }}"
+          commit_message: "⚔️ merge-conflict update: ${{ github.event.issue.title }} by @${{ github.event.issue.user.login }}"
           file_pattern: "README.md state.json web/index.html"
-          commit_user_name: "realm-bot"
-          commit_user_email: "realm-bot@users.noreply.github.com"
+          commit_user_name: "merge-conflict-bot"
+          commit_user_email: "merge-conflict-bot@users.noreply.github.com"
 
       - name: Comment on issue
         uses: actions/github-script@v7

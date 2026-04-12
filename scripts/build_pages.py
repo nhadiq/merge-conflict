@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_pages.py — GitHub Pages builder for realm-v2.
+build_pages.py — GitHub Pages builder for merge-conflict.
 
 Reads state.json and injects it into web/index.template.html,
 producing web/index.html as a fully self-contained interactive
@@ -47,7 +47,7 @@ def get_repo_url() -> str:
             url = "https://github.com/" + url[len("git@github.com:"):]
         return url
     except Exception:
-        return "https://github.com/YOUR_USERNAME/realm-v2"
+        return "https://github.com/YOUR_USERNAME/merge-conflict"
 
 
 def build() -> None:

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-engine.py — realm.md Game Engine v2
+engine.py — merge-conflict Game Engine v2
 Infinite world. Uncapped factions. GitHub-powered combat.
 """
 

@@ -2,7 +2,7 @@
 
 ## What This Is
 
-`realm.md` is a persistent, multiplayer civilization strategy game that uses a GitHub repository as its entire game surface. Players interact exclusively through GitHub Issues. The README is the live game board, rewritten by a GitHub Actions workflow on every move.
+`merge-conflict` is a persistent, multiplayer civilization strategy game that uses a GitHub repository as its entire game surface. Players interact exclusively through GitHub Issues. The README is the live game board, rewritten by a GitHub Actions workflow on every move.
 
 The world is infinite and procedurally generated. It expands as player count grows. Factions are uncapped. The game has no end state.
 
@@ -52,7 +52,7 @@ A cron workflow runs every hour at `:17` to tick the world forward — updating 
 ## Repository Structure
 
 ```
-realm-v2/
+merge-conflict/
 ├── README.md                          # Live game board (auto-generated — do not hand-edit)
 ├── state.json                         # Single source of truth for all game state
 ├── docs/                              # Documentation only (never hand-edit generated files)
@@ -115,5 +115,5 @@ There is no external server, database, or hosting. Everything lives in git histo
 
 - **All state mutations go through `engine.py`** — `world.py` and `render.py` are read-only relative to game state
 - **`render.py` is a pure function** — it has no persistent state, just transforms `state.json` → `README.md`
-- **Concurrency is handled at the Actions level** — both workflows share a `realm-update` concurrency group
+- **Concurrency is handled at the Actions level** — both workflows share a `merge-conflict-update` concurrency group
 - **No external dependencies** — Python 3.10+ standard library only

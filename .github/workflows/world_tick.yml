@@ -6,7 +6,7 @@ on:
   workflow_dispatch:         # Manual trigger for testing
 
 concurrency:
-  group: realm-update
+  group: merge-conflict-update
   cancel-in-progress: false
 
 permissions:
@@ -38,8 +38,8 @@ jobs:
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🌍 World tick — realm.md"
+          commit_message: "🌍 World tick — merge-conflict"
           file_pattern: "README.md state.json web/index.html"
-          commit_user_name: "realm-bot"
-          commit_user_email: "realm-bot@users.noreply.github.com"
+          commit_user_name: "merge-conflict-bot"
+          commit_user_email: "merge-conflict-bot@users.noreply.github.com"
           skip_dirty_check: false

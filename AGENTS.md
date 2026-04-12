@@ -1,4 +1,4 @@
-# AGENTS.md — AI Agent Instructions for realm-v2
+# AGENTS.md — AI Agent Instructions for merge-conflict
 
 This file is read by all AI coding agents working in this repository, including:
 - **Claude Code** (`claude` CLI)
@@ -66,7 +66,7 @@ These constraints must not be violated:
 
 ## 4. Project Overview (Quick Reference)
 
-`realm-v2` is a multiplayer civilization strategy game that runs entirely on GitHub. Players interact through GitHub Issues. The README is the live game board, auto-generated from `state.json`.
+`merge-conflict` is a multiplayer civilization strategy game that runs entirely on GitHub. Players interact through GitHub Issues. The README is the live game board, auto-generated from `state.json`.
 
 ```
 Player opens Issue
