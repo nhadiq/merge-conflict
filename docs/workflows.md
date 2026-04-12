@@ -18,8 +18,9 @@ concurrency:
 1. `checkout` with write token
 2. `setup-python 3.12`
 3. `process_issue.py` — main game logic
-4. `git-auto-commit-action` — commits `README.md` and `state.json`
-5. `actions/github-script` — comments result on Issue, closes Issue, adds `processed` label
+4. `build_pages.py` — rebuild `web/index.html` from new state
+5. `git-auto-commit-action` — commits `README.md`, `state.json`, and `web/index.html`
+6. `actions/github-script` — comments result on Issue, closes Issue, adds `processed` label
 
 ---
 
@@ -36,7 +37,33 @@ on:
 1. `checkout`
 2. `engine.py tick` — world tick logic
 3. `render.py` — re-render README
-4. `git-auto-commit-action` — commits only if files changed (`skip_dirty_check: false`)
+4. `build_pages.py` — rebuild `web/index.html` from new state
+5. `git-auto-commit-action` — commits `README.md`, `state.json`, and `web/index.html` only if files changed
+
+---
+
+## `deploy_pages.yml` — Deploys to GitHub Pages
+
+Triggers on every push to `main` that modifies `web/index.html` (i.e., after every game update commit). Also has `workflow_dispatch` for manual deploys.
+
+```yaml
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/index.html"
+  workflow_dispatch:
+```
+
+**Steps:**
+1. `checkout`
+2. `actions/configure-pages` — set up Pages environment
+3. `actions/upload-pages-artifact` — uploads the `web/` folder as the Pages artifact
+4. `actions/deploy-pages` — deploys the artifact to GitHub Pages
+
+**Required repo setting:** Go to Settings → Pages → Source: **GitHub Actions** (not "Deploy from a branch").
+
+The live site URL is `https://{owner}.github.io/{repo}/`.
 
 The tick workflow skips the commit entirely if nothing changed.
 

@@ -38,4 +38,6 @@ After every code change that affects behavior, **update the corresponding doc in
 - **All state mutations go through `engine.py`** — never write to `state.json` from `world.py` or `render.py`
 - **`render.py` is a pure function** — no side effects, only reads state and writes README
 - **`README.md` is auto-generated** — never hand-edit it; run `render.py` instead
+- **`web/index.html` is auto-generated** — never hand-edit it; edit `web/index.template.html` instead, then run `build_pages.py`
 - **No external dependencies** — Python 3.10+ standard library only
+- **GitHub Pages is deployed via `deploy_pages.yml`** — it triggers automatically when `web/index.html` is pushed to `main`; changing Pages settings requires updating that workflow and repo Settings → Pages → Source: GitHub Actions

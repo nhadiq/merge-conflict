@@ -116,3 +116,22 @@ def parse_title(title: str):
 ```
 
 **Output:** Writes to `$GITHUB_OUTPUT` for the Actions comment step.
+
+---
+
+## `build_pages.py` — GitHub Pages Builder
+
+Reads `state.json` and `docs/index.template.html`, injects the state as inline JSON, and writes `docs/index.html`. Called by both workflows after `render.py`.
+
+**Injection pattern:**
+```python
+state_json = json.dumps(state, separators=(",", ":"))
+html = template.replace("__STATE_JSON__", state_json)
+html = html.replace("'__REPO_URL__'", json.dumps(repo_url))
+```
+
+**Repo URL detection:** Reads `git remote get-url origin` automatically. Can be overridden with `--repo-url https://github.com/owner/repo`.
+
+**Output:** `web/index.html` — fully self-contained, committed alongside `README.md` and `state.json` on every game update. The `deploy_pages.yml` workflow then picks up the push to `main` and deploys the `web/` folder to GitHub Pages.
+
+**Do not hand-edit `web/index.html`** — edit `web/index.template.html` instead.

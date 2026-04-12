@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚔️ realm.md — The Infinite War</title>
+<style>
+  /* ── Base / Reset ─────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=IM+Fell+English:ital@0;1&display=swap');
+
+  :root {
+    --parchment:      #f4e8c1;
+    --parchment-dark: #e8d49a;
+    --parchment-deep: #c9b07a;
+    --ink:            #2c1a0e;
+    --ink-light:      #5a3e28;
+    --gold:           #c8960c;
+    --gold-bright:    #f0b429;
+    --red-war:        #8b1a1a;
+    --green-realm:    #2d5a27;
+    --blue-water:     #1e4d7a;
+    --panel-bg:       rgba(244, 232, 193, 0.95);
+    --panel-border:   #8b6914;
+    --shadow:         rgba(44, 26, 14, 0.35);
+    --tile-size:      48;
+  }
+
+  html, body {
+    width: 100%; height: 100%; overflow: hidden;
+    background: #1a0f05;
+    font-family: 'IM Fell English', Georgia, serif;
+    color: var(--ink);
+    user-select: none;
+  }
+
+  /* ── Top Bar ──────────────────────────────────────────────── */
+  #topbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: 52px;
+    background: linear-gradient(180deg, #2c1a0e 0%, #1a0f05 100%);
+    border-bottom: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  }
+  #topbar .title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--gold-bright);
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px rgba(200,150,12,0.5);
+  }
+  #topbar .stats {
+    display: flex; gap: 24px; align-items: center;
+  }
+  .stat-chip {
+    font-family: 'Cinzel', serif; font-size: 12px;
+    color: var(--parchment-dark);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .stat-chip span { color: var(--gold-bright); font-weight: 600; }
+  #topbar .controls {
+    display: flex; gap: 10px;
+  }
+  .ctrl-btn {
+    background: none; border: 1px solid var(--panel-border);
+    color: var(--parchment-dark); font-family: 'Cinzel', serif; font-size: 11px;
+    padding: 4px 10px; cursor: pointer; border-radius: 3px;
+    transition: all 0.15s;
+  }
+  .ctrl-btn:hover { background: rgba(200,150,12,0.15); color: var(--gold-bright); border-color: var(--gold); }
+  .ctrl-btn.active { background: rgba(200,150,12,0.25); color: var(--gold-bright); border-color: var(--gold-bright); }
+
+  /* ── Layout ───────────────────────────────────────────────── */
+  #layout {
+    position: fixed; top: 52px; left: 0; right: 0; bottom: 64px;
+    display: flex;
+  }
+
+  /* ── Map Area ─────────────────────────────────────────────── */
+  #map-wrap {
+    flex: 1; position: relative; overflow: hidden;
+    background: radial-gradient(ellipse at center, #2a4a2a 0%, #0d1a0d 70%, #050a05 100%);
+    cursor: grab;
+  }
+  #map-wrap.dragging { cursor: grabbing; }
+
+  #map-canvas {
+    position: absolute; top: 0; left: 0;
+    image-rendering: pixelated;
+  }
+
+  /* ── Tooltip ──────────────────────────────────────────────── */
+  #tooltip {
+    position: fixed; z-index: 200; pointer-events: none;
+    background: var(--panel-bg);
+    border: 2px solid var(--panel-border);
+    border-radius: 4px;
+    padding: 10px 14px;
+    box-shadow: 3px 3px 0 var(--shadow), 0 0 16px rgba(200,150,12,0.2);
+    font-size: 13px; line-height: 1.6;
+    max-width: 220px; min-width: 160px;
+    display: none;
+  }
+  #tooltip .tt-terrain {
+    font-family: 'Cinzel', serif; font-size: 15px; font-weight: 600;
+    color: var(--ink); border-bottom: 1px solid var(--parchment-deep);
+    padding-bottom: 4px; margin-bottom: 6px;
+  }
+  #tooltip .tt-row { display: flex; justify-content: space-between; gap: 12px; }
+  #tooltip .tt-label { color: var(--ink-light); }
+  #tooltip .tt-val { font-weight: 600; color: var(--ink); }
+  #tooltip .tt-owner { color: var(--red-war); font-style: italic; }
+  #tooltip .tt-attack-hint {
+    margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--parchment-deep);
+    color: var(--red-war); font-size: 11px; text-align: center;
+    font-family: 'Cinzel', serif;
+  }
+
+  /* ── Right Panel ──────────────────────────────────────────── */
+  #right-panel {
+    width: 300px; min-width: 280px;
+    background: var(--panel-bg);
+    border-left: 3px solid var(--panel-border);
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    box-shadow: -4px 0 16px var(--shadow);
+  }
+
+  .panel-section {
+    border-bottom: 2px solid var(--parchment-deep);
+    padding: 12px 14px;
+    overflow: hidden;
+  }
+  .panel-section:last-child { border-bottom: none; flex: 1; overflow: hidden; display: flex; flex-direction: column; }
+
+  .panel-title {
+    font-family: 'Cinzel', serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 10px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .panel-title::before, .panel-title::after {
+    content: ''; flex: 1; height: 1px; background: var(--parchment-deep);
+  }
+
+  /* ── Faction List ─────────────────────────────────────────── */
+  #faction-list { overflow-y: auto; max-height: 210px; }
+  .faction-row {
+    margin-bottom: 9px;
+  }
+  .faction-header {
+    display: flex; align-items: center; gap: 6px;
+    margin-bottom: 3px; font-size: 12px;
+  }
+  .faction-rank { font-family: 'Cinzel', serif; font-size: 11px; width: 20px; }
+  .faction-name { font-weight: 600; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .faction-score { font-family: 'Cinzel', serif; font-size: 11px; color: var(--ink-light); }
+  .faction-bar-wrap { height: 6px; background: var(--parchment-deep); border-radius: 2px; overflow: hidden; margin-left: 26px; }
+  .faction-bar {
+    height: 100%; border-radius: 2px;
+    transition: width 1s cubic-bezier(0.4,0,0.2,1);
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-bright) 100%);
+  }
+  .faction-sub {
+    margin-left: 26px; font-size: 11px; color: var(--ink-light);
+    margin-top: 2px;
+  }
+
+  /* ── World Stats ──────────────────────────────────────────── */
+  .stat-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px;
+    font-size: 12px;
+  }
+  .stat-item { display: flex; flex-direction: column; }
+  .stat-item .s-label { font-size: 10px; color: var(--ink-light); text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-item .s-val { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 600; color: var(--ink); }
+
+  /* ── Chronicles ───────────────────────────────────────────── */
+  #chronicle-feed {
+    flex: 1; overflow-y: auto; font-size: 11px; line-height: 1.7;
+    padding-right: 4px;
+  }
+  #chronicle-feed::-webkit-scrollbar { width: 4px; }
+  #chronicle-feed::-webkit-scrollbar-track { background: var(--parchment-dark); }
+  #chronicle-feed::-webkit-scrollbar-thumb { background: var(--parchment-deep); border-radius: 2px; }
+  .chronicle-entry {
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(139,105,20,0.2);
+    color: var(--ink-light);
+  }
+  .chronicle-entry:first-child { color: var(--ink); font-weight: 600; }
+
+  /* ── Bottom Bar ───────────────────────────────────────────── */
+  #bottombar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    height: 64px;
+    background: linear-gradient(0deg, #2c1a0e 0%, #1a0f05 100%);
+    border-top: 2px solid var(--gold);
+    display: flex; align-items: center; gap: 12px;
+    padding: 0 16px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.6);
+  }
+
+  .action-btn {
+    font-family: 'Cinzel', serif; font-size: 12px; font-weight: 600;
+    padding: 10px 20px; border-radius: 3px; cursor: pointer;
+    border: 2px solid; letter-spacing: 1px;
+    transition: all 0.15s; white-space: nowrap;
+    text-decoration: none; display: inline-block;
+  }
+  .btn-attack {
+    background: var(--red-war); color: var(--parchment);
+    border-color: #c04040;
+    box-shadow: 0 0 8px rgba(139,26,26,0.4);
+  }
+  .btn-attack:hover { background: #a02020; box-shadow: 0 0 16px rgba(139,26,26,0.7); }
+  .btn-join {
+    background: var(--green-realm); color: var(--parchment);
+    border-color: #4a8a44;
+    box-shadow: 0 0 8px rgba(45,90,39,0.4);
+  }
+  .btn-join:hover { background: #3a7a34; box-shadow: 0 0 16px rgba(45,90,39,0.7); }
+  .btn-found {
+    background: var(--blue-water); color: var(--parchment);
+    border-color: #2e6a9e;
+    box-shadow: 0 0 8px rgba(30,77,122,0.4);
+  }
+  .btn-found:hover { background: #163d62; box-shadow: 0 0 16px rgba(30,77,122,0.7); }
+
+  /* ── Player Lookup ────────────────────────────────────────── */
+  #lookup-wrap {
+    margin-left: auto; display: flex; align-items: center; gap: 8px;
+  }
+  #lookup-input {
+    background: rgba(244,232,193,0.1); border: 1px solid var(--panel-border);
+    color: var(--parchment); font-family: 'Cinzel', serif; font-size: 12px;
+    padding: 8px 12px; border-radius: 3px; width: 160px;
+    outline: none;
+  }
+  #lookup-input::placeholder { color: rgba(244,232,193,0.4); }
+  #lookup-input:focus { border-color: var(--gold); background: rgba(244,232,193,0.15); }
+  #lookup-btn {
+    background: rgba(200,150,12,0.2); border: 1px solid var(--gold);
+    color: var(--gold-bright); font-family: 'Cinzel', serif; font-size: 11px;
+    padding: 8px 14px; cursor: pointer; border-radius: 3px;
+  }
+  #lookup-btn:hover { background: rgba(200,150,12,0.35); }
+
+  /* ── Lookup Result Modal ──────────────────────────────────── */
+  #lookup-modal {
+    position: fixed; inset: 0; z-index: 300;
+    background: rgba(10,5,2,0.75); backdrop-filter: blur(2px);
+    display: none; align-items: center; justify-content: center;
+  }
+  #lookup-modal.open { display: flex; }
+  #lookup-card {
+    background: var(--parchment);
+    border: 3px solid var(--panel-border);
+    border-radius: 6px;
+    padding: 28px 32px;
+    width: 380px; max-width: 95vw;
+    box-shadow: 6px 6px 0 var(--shadow), 0 0 32px rgba(200,150,12,0.2);
+    position: relative;
+  }
+  #lookup-card .lc-close {
+    position: absolute; top: 10px; right: 14px;
+    background: none; border: none; cursor: pointer;
+    font-size: 18px; color: var(--ink-light);
+  }
+  #lookup-card h3 {
+    font-family: 'Cinzel Decorative', serif; font-size: 16px;
+    color: var(--ink); margin-bottom: 4px;
+  }
+  #lookup-card .lc-handle {
+    color: var(--gold); font-size: 13px; margin-bottom: 16px;
+    font-style: italic;
+  }
+  #lookup-card .lc-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  .lc-stat { text-align: center; }
+  .lc-stat .ls-val {
+    font-family: 'Cinzel', serif; font-size: 28px; font-weight: 700;
+    color: var(--red-war); line-height: 1;
+  }
+  .lc-stat .ls-label { font-size: 11px; color: var(--ink-light); margin-top: 3px; }
+  #lookup-card .lc-streak {
+    margin-top: 16px; padding: 10px; background: var(--parchment-dark);
+    border-radius: 3px; text-align: center;
+    font-family: 'Cinzel', serif; font-size: 13px;
+  }
+  #lookup-card .lc-loading { text-align: center; padding: 20px; color: var(--ink-light); font-style: italic; }
+  #lookup-card .lc-error { text-align: center; padding: 20px; color: var(--red-war); font-style: italic; }
+
+  /* ── Mini-map ─────────────────────────────────────────────── */
+  #minimap-wrap {
+    position: absolute; bottom: 12px; left: 12px; z-index: 50;
+    background: rgba(20,12,5,0.85);
+    border: 2px solid var(--panel-border);
+    border-radius: 3px; padding: 4px;
+    box-shadow: 2px 2px 8px var(--shadow);
+  }
+  #minimap { display: block; cursor: pointer; }
+
+  /* ── Zoom Controls ────────────────────────────────────────── */
+  #zoom-controls {
+    position: absolute; top: 12px; left: 12px; z-index: 50;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .zoom-btn {
+    width: 30px; height: 30px;
+    background: rgba(20,12,5,0.85); border: 2px solid var(--panel-border);
+    color: var(--parchment-dark); font-size: 18px; line-height: 1;
+    cursor: pointer; border-radius: 3px; display: flex; align-items: center; justify-content: center;
+    transition: all 0.1s;
+  }
+  .zoom-btn:hover { background: rgba(200,150,12,0.2); border-color: var(--gold); color: var(--gold-bright); }
+
+  /* ── Alliance Modal ───────────────────────────────────────── */
+  #empty-state {
+    position: absolute; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    color: var(--parchment-dark); text-align: center; pointer-events: none;
+    opacity: 0; transition: opacity 0.5s;
+  }
+  #empty-state.visible { opacity: 1; }
+  #empty-state h2 { font-family: 'Cinzel Decorative', serif; font-size: 24px; color: var(--gold); margin-bottom: 10px; }
+  #empty-state p { font-size: 14px; max-width: 360px; line-height: 1.7; font-style: italic; }
+
+  /* ── Scrollbars ───────────────────────────────────────────── */
+  #faction-list::-webkit-scrollbar { width: 4px; }
+  #faction-list::-webkit-scrollbar-track { background: var(--parchment-dark); }
+  #faction-list::-webkit-scrollbar-thumb { background: var(--parchment-deep); border-radius: 2px; }
+
+  /* ── Responsive ───────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    #right-panel { display: none; }
+    #topbar .stats { gap: 12px; }
+    .stat-chip { font-size: 10px; }
+  }
+
+  /* ── Ornamental borders ───────────────────────────────────── */
+  .ornament { color: var(--gold); font-size: 14px; opacity: 0.6; }
+</style>
+</head>
+<body>
+
+<!-- ══ Top Bar ════════════════════════════════════════════════ -->
+<div id="topbar">
+  <div class="title">⚔ REALM.MD</div>
+  <div class="stats">
+    <div class="stat-chip">🌍 World Age <span id="s-age">—</span></div>
+    <div class="stat-chip">⚔ Warriors <span id="s-warriors">—</span></div>
+    <div class="stat-chip">🏛 Civilizations <span id="s-civs">—</span></div>
+    <div class="stat-chip">🗺 World <span id="s-world">—</span></div>
+  </div>
+  <div class="controls">
+    <button class="ctrl-btn" id="btn-sound" title="Toggle ambient sound">🔇 Sound</button>
+    <button class="ctrl-btn" id="btn-reset-view" title="Reset map view">⌖ Reset</button>
+    <a class="ctrl-btn" id="link-readme" href="../../blob/main/README.md" target="_blank">📜 README</a>
+  </div>
+</div>
+
+<!-- ══ Main Layout ════════════════════════════════════════════ -->
+<div id="layout">
+
+  <!-- Map -->
+  <div id="map-wrap">
+    <canvas id="map-canvas"></canvas>
+
+    <div id="zoom-controls">
+      <button class="zoom-btn" id="btn-zoom-in">+</button>
+      <button class="zoom-btn" id="btn-zoom-out">−</button>
+    </div>
+
+    <div id="minimap-wrap">
+      <canvas id="minimap" width="120" height="120" title="Click to reset view"></canvas>
+    </div>
+
+    <div id="empty-state">
+      <h2>The World Awaits</h2>
+      <p>No civilizations have risen yet. Be the first to plant your banner and claim the ancient heartland.</p>
+    </div>
+  </div>
+
+  <!-- Right Panel -->
+  <div id="right-panel">
+
+    <!-- Civilizations -->
+    <div class="panel-section">
+      <div class="panel-title">Civilizations</div>
+      <div id="faction-list">
+        <div style="text-align:center;font-style:italic;color:var(--ink-light);font-size:12px;padding:12px 0;">
+          No civilizations yet.
+        </div>
+      </div>
+    </div>
+
+    <!-- World Stats -->
+    <div class="panel-section">
+      <div class="panel-title">World</div>
+      <div class="stat-grid">
+        <div class="stat-item"><div class="s-label">Size</div><div class="s-val" id="ws-size">—</div></div>
+        <div class="stat-item"><div class="s-label">Claimed</div><div class="s-val" id="ws-claimed">—</div></div>
+        <div class="stat-item"><div class="s-label">Wonders</div><div class="s-val" id="ws-wonders">—</div></div>
+        <div class="stat-item"><div class="s-label">Age</div><div class="s-val" id="ws-age">—</div></div>
+      </div>
+    </div>
+
+    <!-- Chronicles -->
+    <div class="panel-section" style="flex:1;display:flex;flex-direction:column;">
+      <div class="panel-title">Chronicles</div>
+      <div id="chronicle-feed">
+        <div class="chronicle-entry" style="font-style:italic;">The world is silent. History begins now.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ Bottom Bar ═════════════════════════════════════════════ -->
+<div id="bottombar">
+  <a class="action-btn btn-attack" id="link-attack" href="#" target="_blank">⚔ Attack</a>
+  <a class="action-btn btn-join" id="link-join" href="#" target="_blank">🛡 Join Faction</a>
+  <a class="action-btn btn-found" id="link-found" href="#" target="_blank">🏛 Found Civilization</a>
+  <div id="lookup-wrap">
+    <input id="lookup-input" type="text" placeholder="GitHub username…" maxlength="39" autocomplete="off" spellcheck="false">
+    <button id="lookup-btn">⚡ Power Check</button>
+  </div>
+</div>
+
+<!-- ══ Tooltip ════════════════════════════════════════════════ -->
+<div id="tooltip">
+  <div class="tt-terrain" id="tt-terrain">—</div>
+  <div class="tt-row"><span class="tt-label">Defense</span><span class="tt-val" id="tt-defense">—</span></div>
+  <div class="tt-row"><span class="tt-label">Biome</span><span class="tt-val" id="tt-biome">—</span></div>
+  <div class="tt-row"><span class="tt-label">Coords</span><span class="tt-val" id="tt-coords">—</span></div>
+  <div class="tt-row" id="tt-owner-row"><span class="tt-label">Owner</span><span class="tt-owner" id="tt-owner">—</span></div>
+  <div class="tt-row" id="tt-wonder-row" style="display:none"><span class="tt-label">Wonder</span><span class="tt-val" id="tt-wonder" style="color:var(--gold)">—</span></div>
+  <div class="tt-attack-hint" id="tt-attack-hint" style="display:none">Click to attack ⚔</div>
+</div>
+
+<!-- ══ Player Lookup Modal ════════════════════════════════════ -->
+<div id="lookup-modal">
+  <div id="lookup-card">
+    <button class="lc-close" id="modal-close">✕</button>
+    <div id="lookup-content">
+      <div class="lc-loading">Consulting the oracles…</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ Injected Game State ════════════════════════════════════ -->
+<script>
+const GAME_STATE = {"version":2,"world_age":0,"last_updated":"","player_count":0,"faction_count":0,"factions":{},"players":{},"tiles":{},"world_bounds":{"min_row":-2,"max_row":2,"min_col":-2,"max_col":2},"biome_seeds":{"north":"norse","south":"carthage","east":"persia","west":"egypt"},"wonders":{},"alliances":{},"event_log":[],"hall_of_fame":[]};
+const REPO_URL   = "https://github.com/nhadiq/realm-v2";
+</script>
+
+<!-- ══ Game Engine ════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+// ── Constants ─────────────────────────────────────────────────
+const TILE_EMOJIS = {
+  plains:'⬜', forest:'🌲', mountain:'⛰️', desert:'🏜️',
+  ruins:'🏛️', oasis:'🌴', nile:'🔵', tundra:'❄️',
+  fjord:'🌊', longhouse:'🏠', rune_stone:'🗿', jungle:'🌿',
+  savanna:'🟫', lost_city:'🌆', swamp:'🟢', volcano:'🌋',
+  coast:'🏖️', steppe:'🌾', silk_road:'🛣️', citadel:'🏰',
+  bazaar:'🏪', pyramid:'🔺', sea:'🌊'
+};
+
+const TERRAIN_DEFENSE = {
+  plains:0, desert:0, savanna:0, tundra:0, steppe:0, coast:0,
+  nile:1, fjord:1, jungle:1, swamp:1, silk_road:1, bazaar:1,
+  forest:2, oasis:2, ruins:2, longhouse:2, volcano:2,
+  mountain:3, rune_stone:3, pyramid:3, citadel:3, lost_city:3
+};
+
+const BIOME_COLORS = {
+  heartland: '#4a7a40', norse: '#3a5a6a', carthage: '#5a7a35',
+  persia: '#7a6a35', egypt: '#8a6a2a', sea: '#1e4d7a'
+};
+
+const BIOME_LABELS = {
+  heartland:'Heartland', norse:'Norse', carthage:'Carthage',
+  persia:'Persia', egypt:'Egypt'
+};
+
+// Tile background colors per terrain (for canvas drawing)
+const TERRAIN_FILL = {
+  plains:     '#c8d48a', forest:     '#4a7a3a', mountain:   '#7a7a6a',
+  desert:     '#d4b06a', ruins:      '#8a7a5a', oasis:      '#5aaa6a',
+  nile:       '#4a7aaa', tundra:     '#b0c4d0', fjord:      '#5a8aaa',
+  longhouse:  '#7a5a3a', rune_stone: '#6a6a5a', jungle:     '#3a6a30',
+  savanna:    '#c4a85a', lost_city:  '#8a6a9a', swamp:      '#5a7a4a',
+  volcano:    '#7a4a3a', coast:      '#dcc88a', steppe:     '#b4a46a',
+  silk_road:  '#c4a46a', citadel:    '#7a6a5a', bazaar:     '#aa8a5a',
+  pyramid:    '#d4aa50', sea:        '#1e4d7a'
+};
+
+// ── State & Camera ────────────────────────────────────────────
+const state = GAME_STATE;
+
+const cam = { x: 0, y: 0, scale: 1 };
+const TILE_PX = 48;
+let isDragging = false;
+let dragStart = { x: 0, y: 0 };
+let camStart  = { x: 0, y: 0 };
+let hoveredTile = null;
+let soundEnabled = false;
+let audioCtx = null;
+
+// ── DOM refs ─────────────────────────────────────────────────
+const canvas     = document.getElementById('map-canvas');
+const ctx        = canvas.getContext('2d');
+const miniCanvas = document.getElementById('minimap');
+const miniCtx    = miniCanvas.getContext('2d');
+const tooltip    = document.getElementById('tooltip');
+const mapWrap    = document.getElementById('map-wrap');
+const emptyState = document.getElementById('empty-state');
+
+// ── Tile generation (mirrors world.py logic) ─────────────────
+function hashTile(row, col, seed=42) {
+  // Simple deterministic hash matching Python's MD5 approach (mod arithmetic)
+  // We use a fast string hash that gives the same distribution
+  let s = `${seed}:${row}:${col}`;
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+function getBiome(row, col, biomeSeeds) {
+  const dr = row, dc = col;
+  const dist = Math.max(Math.abs(dr), Math.abs(dc));
+  if (dist < 3) return 'heartland';
+  if (Math.abs(dr) >= Math.abs(dc)) {
+    return dr < 0 ? (biomeSeeds.north || 'norse') : (biomeSeeds.south || 'carthage');
+  } else {
+    return dc > 0 ? (biomeSeeds.east || 'persia') : (biomeSeeds.west || 'egypt');
+  }
+}
+
+const BIOME_TERRAINS = {
+  heartland: ['plains','plains','plains','forest','forest','forest','forest','mountain','mountain','mountain','desert','desert','desert','ruins','ruins','oasis','nile','nile'],
+  norse:     ['tundra','tundra','tundra','fjord','fjord','mountain','mountain','mountain','forest','forest','longhouse','rune_stone','plains'],
+  carthage:  ['jungle','jungle','jungle','savanna','savanna','lost_city','swamp','swamp','swamp','volcano','coast','coast','coast','plains','plains'],
+  persia:    ['steppe','steppe','steppe','silk_road','silk_road','citadel','oasis','oasis','mountain','mountain','bazaar','bazaar','ruins','ruins','ruins'],
+  egypt:     ['desert','desert','desert','desert','pyramid','oasis','oasis','nile','nile','nile','nile','ruins','plains','plains','plains','savanna','savanna']
+};
+
+function getTerrain(row, col, biomeSeeds) {
+  const key = `${row},${col}`;
+  if (state.tiles && state.tiles[key]) return state.tiles[key];
+  const biome = getBiome(row, col, biomeSeeds);
+  const pool = BIOME_TERRAINS[biome] || BIOME_TERRAINS.heartland;
+  const h = hashTile(row, col);
+  const terrain = pool[h % pool.length];
+  const isWonder = (h % 40 === 7) && terrain !== 'sea';
+  return { row, col, terrain, emoji: TILE_EMOJIS[terrain] || '⬜',
+           defense: TERRAIN_DEFENSE[terrain] || 0, biome, owner: null,
+           wonder: isWonder ? '✨' : null };
+}
+
+// ── World bounds ──────────────────────────────────────────────
+const bounds = state.world_bounds || { min_row:-2, max_row:2, min_col:-2, max_col:2 };
+const rows = bounds.max_row - bounds.min_row + 1;
+const cols = bounds.max_col - bounds.min_col + 1;
+
+function worldToCanvas(row, col) {
+  const wx = (col - bounds.min_col) * TILE_PX;
+  const wy = (row - bounds.min_row) * TILE_PX;
+  return { x: wx * cam.scale + cam.x, y: wy * cam.scale + cam.y };
+}
+
+function canvasToWorld(cx, cy) {
+  const wx = (cx - cam.x) / cam.scale;
+  const wy = (cy - cam.y) / cam.scale;
+  const col = Math.floor(wx / TILE_PX) + bounds.min_col;
+  const row = Math.floor(wy / TILE_PX) + bounds.min_row;
+  return { row, col };
+}
+
+function inBounds(row, col) {
+  return row >= bounds.min_row && row <= bounds.max_row &&
+         col >= bounds.min_col && col <= bounds.max_col;
+}
+
+// ── Emoji rendering on canvas ─────────────────────────────────
+function drawEmoji(emoji, x, y, size) {
+  ctx.font = `${Math.floor(size * 0.62)}px serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(emoji, x, y);
+}
+
+// ── Main draw ─────────────────────────────────────────────────
+function draw() {
+  const W = canvas.width, H = canvas.height;
+  ctx.clearRect(0, 0, W, H);
+
+  const ts = TILE_PX * cam.scale;
+
+  // Compute visible tile range
+  const topLeft     = canvasToWorld(0, 0);
+  const bottomRight = canvasToWorld(W, H);
+  const rStart = Math.max(bounds.min_row, topLeft.row - 1);
+  const rEnd   = Math.min(bounds.max_row, bottomRight.row + 1);
+  const cStart = Math.max(bounds.min_col, topLeft.col - 1);
+  const cEnd   = Math.min(bounds.max_col, bottomRight.col + 1);
+
+  for (let r = rStart; r <= rEnd; r++) {
+    for (let c = cStart; c <= cEnd; c++) {
+      const tile = getTerrain(r, c, state.biome_seeds || {});
+      const sx = (c - bounds.min_col) * ts + cam.x;
+      const sy = (r - bounds.min_row) * ts + cam.y;
+
+      // Base fill
+      let fill = TERRAIN_FILL[tile.terrain] || '#888';
+      if (tile.terrain === 'sea' || tile.terrain === 'fjord') fill = '#1e4d7a';
+      ctx.fillStyle = fill;
+      ctx.fillRect(sx, sy, ts - 1, ts - 1);
+
+      // Owner overlay
+      if (tile.owner && state.factions[tile.owner]) {
+        const faction = state.factions[tile.owner];
+        ctx.fillStyle = 'rgba(0,0,0,0.28)';
+        ctx.fillRect(sx, sy, ts - 1, ts - 1);
+      }
+
+      if (ts >= 20) {
+        // Emoji
+        const emoji = tile.owner && state.factions[tile.owner]
+          ? state.factions[tile.owner].banner
+          : (tile.emoji || TILE_EMOJIS[tile.terrain] || '⬜');
+        drawEmoji(emoji, sx + ts/2, sy + ts/2, ts);
+      }
+
+      // Wonder shimmer
+      if (tile.wonder) {
+        ctx.strokeStyle = 'rgba(240,180,40,0.7)';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(sx + 1, sy + 1, ts - 3, ts - 3);
+      }
+
+      // Hovered highlight
+      if (hoveredTile && hoveredTile.row === r && hoveredTile.col === c) {
+        ctx.fillStyle = 'rgba(255,255,200,0.25)';
+        ctx.fillRect(sx, sy, ts - 1, ts - 1);
+        ctx.strokeStyle = 'rgba(240,180,40,0.9)';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(sx + 1, sy + 1, ts - 3, ts - 3);
+      }
+    }
+  }
+
+  // Grid lines (subtle, only when zoomed in)
+  if (ts >= 16) {
+    ctx.strokeStyle = 'rgba(0,0,0,0.18)';
+    ctx.lineWidth = 0.5;
+    for (let r = rStart; r <= rEnd + 1; r++) {
+      const y = (r - bounds.min_row) * ts + cam.y;
+      ctx.beginPath(); ctx.moveTo(cam.x, y); ctx.lineTo(cam.x + cols * ts, y); ctx.stroke();
+    }
+    for (let c = cStart; c <= cEnd + 1; c++) {
+      const x = (c - bounds.min_col) * ts + cam.x;
+      ctx.beginPath(); ctx.moveTo(x, cam.y); ctx.lineTo(x, cam.y + rows * ts); ctx.stroke();
+    }
+  }
+
+  // Outer world border
+  ctx.strokeStyle = 'rgba(200,150,12,0.5)';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(cam.x, cam.y, cols * ts, rows * ts);
+
+  drawMinimap();
+}
+
+// ── Minimap ───────────────────────────────────────────────────
+function drawMinimap() {
+  const mw = miniCanvas.width, mh = miniCanvas.height;
+  miniCtx.clearRect(0, 0, mw, mh);
+  const tw = mw / cols, th = mh / rows;
+
+  for (let r = bounds.min_row; r <= bounds.max_row; r++) {
+    for (let c = bounds.min_col; c <= bounds.max_col; c++) {
+      const tile = getTerrain(r, c, state.biome_seeds || {});
+      const mx = (c - bounds.min_col) * tw;
+      const my = (r - bounds.min_row) * th;
+
+      if (tile.owner && state.factions[tile.owner]) {
+        // Draw faction color based on banner (simple hash → hue)
+        const slug = tile.owner;
+        miniCtx.fillStyle = factionColor(slug);
+      } else {
+        miniCtx.fillStyle = TERRAIN_FILL[tile.terrain] || '#888';
+      }
+      miniCtx.fillRect(mx, my, Math.max(tw, 1), Math.max(th, 1));
+    }
+  }
+
+  // Viewport indicator
+  const ts = TILE_PX * cam.scale;
+  const vx0 = -cam.x / ts, vy0 = -cam.y / ts;
+  const vw  = canvas.width / ts, vh  = canvas.height / ts;
+  miniCtx.strokeStyle = 'rgba(240,180,40,0.9)';
+  miniCtx.lineWidth = 1.5;
+  miniCtx.strokeRect(vx0 * tw, vy0 * th, vw * tw, vh * th);
+}
+
+const factionColorCache = {};
+function factionColor(slug) {
+  if (factionColorCache[slug]) return factionColorCache[slug];
+  let h = 0;
+  for (let i = 0; i < slug.length; i++) h = (Math.imul(31, h) + slug.charCodeAt(i)) | 0;
+  const hue = Math.abs(h) % 360;
+  const c = `hsl(${hue}, 60%, 48%)`;
+  factionColorCache[slug] = c;
+  return c;
+}
+
+// ── Resize ────────────────────────────────────────────────────
+function resizeCanvas() {
+  canvas.width  = mapWrap.clientWidth;
+  canvas.height = mapWrap.clientHeight;
+  draw();
+}
+
+// ── Center view on world ──────────────────────────────────────
+function resetView() {
+  const W = canvas.width, H = canvas.height;
+  const worldW = cols * TILE_PX, worldH = rows * TILE_PX;
+  const scaleX = W / worldW, scaleY = H / worldH;
+  cam.scale = Math.min(scaleX, scaleY, 2) * 0.85;
+  cam.x = (W - worldW * cam.scale) / 2;
+  cam.y = (H - worldH * cam.scale) / 2;
+  draw();
+}
+
+// ── Zoom ──────────────────────────────────────────────────────
+function zoomAt(cx, cy, factor) {
+  const newScale = Math.max(0.15, Math.min(6, cam.scale * factor));
+  const ratio = newScale / cam.scale;
+  cam.x = cx - (cx - cam.x) * ratio;
+  cam.y = cy - (cy - cam.y) * ratio;
+  cam.scale = newScale;
+  draw();
+}
+
+// ── Drag ──────────────────────────────────────────────────────
+mapWrap.addEventListener('mousedown', e => {
+  if (e.button !== 0) return;
+  isDragging = true;
+  dragStart  = { x: e.clientX, y: e.clientY };
+  camStart   = { x: cam.x, y: cam.y };
+  mapWrap.classList.add('dragging');
+});
+
+window.addEventListener('mousemove', e => {
+  if (isDragging) {
+    cam.x = camStart.x + (e.clientX - dragStart.x);
+    cam.y = camStart.y + (e.clientY - dragStart.y);
+    draw();
+  } else {
+    // Tooltip
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    const { row, col } = canvasToWorld(mx, my);
+    if (inBounds(row, col)) {
+      const tile = getTerrain(row, col, state.biome_seeds || {});
+      hoveredTile = tile;
+      showTooltip(e, tile);
+    } else {
+      hoveredTile = null;
+      tooltip.style.display = 'none';
+    }
+    draw();
+  }
+});
+
+window.addEventListener('mouseup', () => {
+  isDragging = false;
+  mapWrap.classList.remove('dragging');
+});
+
+// ── Wheel zoom ────────────────────────────────────────────────
+mapWrap.addEventListener('wheel', e => {
+  e.preventDefault();
+  const rect = canvas.getBoundingClientRect();
+  const cx = e.clientX - rect.left, cy = e.clientY - rect.top;
+  zoomAt(cx, cy, e.deltaY < 0 ? 1.12 : 0.89);
+}, { passive: false });
+
+// ── Touch support ─────────────────────────────────────────────
+let lastTouchDist = null;
+mapWrap.addEventListener('touchstart', e => {
+  if (e.touches.length === 1) {
+    isDragging = true;
+    dragStart  = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    camStart   = { x: cam.x, y: cam.y };
+  } else if (e.touches.length === 2) {
+    lastTouchDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX,
+                               e.touches[0].clientY - e.touches[1].clientY);
+  }
+});
+mapWrap.addEventListener('touchmove', e => {
+  e.preventDefault();
+  if (e.touches.length === 1 && isDragging) {
+    cam.x = camStart.x + (e.touches[0].clientX - dragStart.x);
+    cam.y = camStart.y + (e.touches[0].clientY - dragStart.y);
+    draw();
+  } else if (e.touches.length === 2) {
+    const dist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX,
+                            e.touches[0].clientY - e.touches[1].clientY);
+    if (lastTouchDist) zoomAt(canvas.width/2, canvas.height/2, dist / lastTouchDist);
+    lastTouchDist = dist;
+  }
+}, { passive: false });
+mapWrap.addEventListener('touchend', () => { isDragging = false; lastTouchDist = null; });
+
+// ── Click to attack ───────────────────────────────────────────
+canvas.addEventListener('click', e => {
+  if (isDragging) return;
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+  const { row, col } = canvasToWorld(mx, my);
+  if (!inBounds(row, col)) return;
+  const tile = getTerrain(row, col, state.biome_seeds || {});
+  if (tile.terrain === 'sea') return;
+  const url = `${REPO_URL}/issues/new?template=attack.yml&title=ATTACK+${row}+${col}`;
+  window.open(url, '_blank');
+  playAttackSound();
+});
+
+// ── Tooltip ───────────────────────────────────────────────────
+function showTooltip(e, tile) {
+  document.getElementById('tt-terrain').textContent =
+    `${tile.emoji || TILE_EMOJIS[tile.terrain] || '⬜'} ${capitalize(tile.terrain || '').replace('_',' ')}`;
+  document.getElementById('tt-defense').textContent = '⚔'.repeat(tile.defense || 0) + (tile.defense ? '' : 'None');
+  document.getElementById('tt-biome').textContent = BIOME_LABELS[tile.biome] || tile.biome || '—';
+  document.getElementById('tt-coords').textContent = `(${tile.row}, ${tile.col})`;
+
+  const ownerRow = document.getElementById('tt-owner-row');
+  const ownerEl  = document.getElementById('tt-owner');
+  if (tile.owner && state.factions[tile.owner]) {
+    ownerEl.textContent = state.factions[tile.owner].name;
+    ownerRow.style.display = 'flex';
+  } else {
+    ownerRow.style.display = 'none';
+  }
+
+  const wonderRow = document.getElementById('tt-wonder-row');
+  if (tile.wonder) {
+    document.getElementById('tt-wonder').textContent = tile.wonder;
+    wonderRow.style.display = 'flex';
+  } else {
+    wonderRow.style.display = 'none';
+  }
+
+  const hint = document.getElementById('tt-attack-hint');
+  hint.style.display = tile.terrain !== 'sea' ? 'block' : 'none';
+
+  tooltip.style.display = 'block';
+  const tx = Math.min(e.clientX + 16, window.innerWidth  - 240);
+  const ty = Math.min(e.clientY + 16, window.innerHeight - 160);
+  tooltip.style.left = tx + 'px';
+  tooltip.style.top  = ty + 'px';
+}
+
+mapWrap.addEventListener('mouseleave', () => {
+  tooltip.style.display = 'none';
+  hoveredTile = null;
+  draw();
+});
+
+// ── Populate UI panels ────────────────────────────────────────
+function populateUI() {
+  // Top bar
+  document.getElementById('s-age').textContent      = state.world_age ?? '—';
+  document.getElementById('s-warriors').textContent  = state.player_count ?? '—';
+  document.getElementById('s-world').textContent     = `${rows}×${cols}`;
+
+  const activeFactions = Object.values(state.factions || {}).filter(f => !f.dissolved);
+  document.getElementById('s-civs').textContent = activeFactions.length;
+
+  // Empty state
+  if (activeFactions.length === 0) {
+    emptyState.classList.add('visible');
+  }
+
+  // World stats panel
+  const totalTiles = rows * cols;
+  const claimed = Object.values(state.tiles || {}).filter(t => t.owner).length;
+  const pct = totalTiles > 0 ? Math.round(claimed / totalTiles * 100) : 0;
+  const wonders = Object.values(state.tiles || {}).filter(t => t.wonder).length;
+  document.getElementById('ws-size').textContent    = `${rows}×${cols}`;
+  document.getElementById('ws-claimed').textContent  = `${pct}%`;
+  document.getElementById('ws-wonders').textContent  = wonders;
+  document.getElementById('ws-age').textContent      = state.world_age ?? 0;
+
+  // Faction list
+  const factionList = document.getElementById('faction-list');
+  if (activeFactions.length > 0) {
+    const sorted = activeFactions.sort((a, b) => (b.score || 0) - (a.score || 0));
+    const maxScore = sorted[0]?.score || 1;
+    const medals = ['🥇','🥈','🥉'];
+    factionList.innerHTML = sorted.map((f, i) => {
+      const pct = Math.round((f.score || 0) / maxScore * 100);
+      const territories = (f.territories || []).length;
+      const members = (f.members || []).length;
+      const rank = i < 3 ? medals[i] : `#${i+1}`;
+      return `
+        <div class="faction-row">
+          <div class="faction-header">
+            <span class="faction-rank">${rank}</span>
+            <span style="font-size:15px">${f.banner || '🏴'}</span>
+            <span class="faction-name" title="${f.name}">${f.name}</span>
+            <span class="faction-score">${f.score || 0}</span>
+          </div>
+          <div class="faction-bar-wrap">
+            <div class="faction-bar" style="width:${pct}%"></div>
+          </div>
+          <div class="faction-sub">${members} warriors · ${territories} tiles
+            <a href="${REPO_URL}/issues/new?template=join_faction.yml&title=JOIN+${f.slug}"
+               target="_blank"
+               style="margin-left:8px;color:var(--gold);text-decoration:none;font-family:'Cinzel',serif;font-size:10px;">
+               + Join
+            </a>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Chronicles
+  const log = (state.event_log || []).slice().reverse();
+  const feed = document.getElementById('chronicle-feed');
+  if (log.length > 0) {
+    feed.innerHTML = log.map((e, i) =>
+      `<div class="chronicle-entry">${e}</div>`
+    ).join('');
+  }
+
+  // Action links
+  document.getElementById('link-attack').href =
+    `${REPO_URL}/issues/new?template=attack.yml`;
+  document.getElementById('link-join').href =
+    `${REPO_URL}/issues/new?template=join_faction.yml`;
+  document.getElementById('link-found').href =
+    `${REPO_URL}/issues/new?template=found_faction.yml`;
+  document.getElementById('link-readme').href =
+    `${REPO_URL}/blob/main/README.md`;
+}
+
+// ── Controls ──────────────────────────────────────────────────
+document.getElementById('btn-reset-view').addEventListener('click', resetView);
+document.getElementById('btn-zoom-in').addEventListener('click', () =>
+  zoomAt(canvas.width/2, canvas.height/2, 1.25));
+document.getElementById('btn-zoom-out').addEventListener('click', () =>
+  zoomAt(canvas.width/2, canvas.height/2, 0.8));
+
+miniCanvas.addEventListener('click', resetView);
+
+// ── Sound ─────────────────────────────────────────────────────
+document.getElementById('btn-sound').addEventListener('click', () => {
+  soundEnabled = !soundEnabled;
+  const btn = document.getElementById('btn-sound');
+  btn.textContent = soundEnabled ? '🔊 Sound' : '🔇 Sound';
+  btn.classList.toggle('active', soundEnabled);
+  if (soundEnabled && !audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    playAmbient();
+  }
+  if (audioCtx) {
+    if (soundEnabled) audioCtx.resume();
+    else audioCtx.suspend();
+  }
+});
+
+function playAmbient() {
+  if (!audioCtx || !soundEnabled) return;
+  // Low-frequency drone using oscillators (no external files)
+  const osc1 = audioCtx.createOscillator();
+  const osc2 = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc1.type = 'sine'; osc1.frequency.value = 60;
+  osc2.type = 'sine'; osc2.frequency.value = 90;
+  gain.gain.value = 0.04;
+  osc1.connect(gain); osc2.connect(gain);
+  gain.connect(audioCtx.destination);
+  osc1.start(); osc2.start();
+}
+
+function playAttackSound() {
+  if (!audioCtx || !soundEnabled) return;
+  const osc  = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc.type = 'sawtooth'; osc.frequency.value = 220;
+  gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+  osc.connect(gain); gain.connect(audioCtx.destination);
+  osc.start(); osc.stop(audioCtx.currentTime + 0.3);
+}
+
+// ── Player Power Lookup ────────────────────────────────────────
+document.getElementById('lookup-btn').addEventListener('click', doLookup);
+document.getElementById('lookup-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') doLookup();
+});
+document.getElementById('modal-close').addEventListener('click', () => {
+  document.getElementById('lookup-modal').classList.remove('open');
+});
+document.getElementById('lookup-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('lookup-modal'))
+    document.getElementById('lookup-modal').classList.remove('open');
+});
+
+async function doLookup() {
+  const username = document.getElementById('lookup-input').value.trim();
+  if (!username) return;
+  const modal = document.getElementById('lookup-modal');
+  const content = document.getElementById('lookup-content');
+  content.innerHTML = '<div class="lc-loading">Consulting the oracles…</div>';
+  modal.classList.add('open');
+  try {
+    const [userRes, eventsRes] = await Promise.all([
+      fetch(`https://api.github.com/users/${encodeURIComponent(username)}`),
+      fetch(`https://api.github.com/users/${encodeURIComponent(username)}/events/public?per_page=30`)
+    ]);
+    if (!userRes.ok) throw new Error('User not found');
+    const user   = await userRes.json();
+    const events = eventsRes.ok ? await eventsRes.json() : [];
+
+    const today = new Date().toISOString().split('T')[0];
+    let commitsToday = 0, prsMerged = 0, prsOpen = 0, issuesClosed = 0;
+    const commitDays = new Set();
+
+    for (const ev of events) {
+      const day = (ev.created_at || '').split('T')[0];
+      if (ev.type === 'PushEvent') {
+        commitDays.add(day);
+        if (day === today) commitsToday += (ev.payload?.commits?.length || 1);
+      } else if (ev.type === 'PullRequestEvent') {
+        if (ev.payload?.action === 'closed' && ev.payload?.pull_request?.merged) prsMerged++;
+        else if (ev.payload?.action === 'opened') prsOpen++;
+      } else if (ev.type === 'IssuesEvent' && ev.payload?.action === 'closed') {
+        issuesClosed++;
+      }
+    }
+
+    // Streak
+    let streak = 0;
+    const d = new Date(); d.setHours(0,0,0,0);
+    while (true) {
+      const ds = d.toISOString().split('T')[0];
+      if (commitDays.has(ds)) { streak++; d.setDate(d.getDate()-1); }
+      else break;
+    }
+
+    const attack  = Math.min(15, commitsToday * 2 + prsMerged * 3);
+    const defense = Math.min(10, prsOpen + issuesClosed);
+    const morale  = Math.min(8, Math.log(1 + (user.followers || 0))).toFixed(1);
+
+    const tierEmojis = ['—','⚡ Tier 1','⚡⚡ Tier 2','🌟 Tier 3','👑 LEGENDARY'];
+    const tier = streak >= 30 ? 4 : streak >= 14 ? 3 : streak >= 7 ? 2 : streak >= 3 ? 1 : 0;
+    const tierLabel = tierEmojis[tier];
+    const tierDesc  = ['No bonus','+ 1 Attack','Guaranteed Capture','×1.5 Attack','×2 Attack + 24h Immunity'][tier];
+
+    content.innerHTML = `
+      <h3>${user.name || username}</h3>
+      <div class="lc-handle">@${username} · ${user.public_repos || 0} repos · ${user.followers || 0} followers</div>
+      <div class="lc-stats">
+        <div class="lc-stat"><div class="ls-val" style="color:var(--red-war)">${attack}</div><div class="ls-label">Attack Power</div></div>
+        <div class="lc-stat"><div class="ls-val" style="color:var(--green-realm)">${defense}</div><div class="ls-label">Defense Power</div></div>
+        <div class="lc-stat"><div class="ls-val" style="color:var(--blue-water)">${morale}</div><div class="ls-label">Morale</div></div>
+        <div class="lc-stat"><div class="ls-val" style="color:var(--gold)">${streak}</div><div class="ls-label">Commit Streak</div></div>
+      </div>
+      <div class="lc-streak">
+        ${tierLabel} — ${tierDesc}
+      </div>
+    `;
+  } catch (err) {
+    content.innerHTML = `<div class="lc-error">Could not find warrior "<strong>${username}</strong>".<br><small>${err.message}</small></div>`;
+  }
+}
+
+// ── Utility ───────────────────────────────────────────────────
+function capitalize(s) {
+  return s ? s.charAt(0).toUpperCase() + s.slice(1) : '';
+}
+
+// ── Boot ──────────────────────────────────────────────────────
+window.addEventListener('resize', () => { resizeCanvas(); });
+window.addEventListener('load', () => {
+  resizeCanvas();
+  populateUI();
+  resetView();
+});
+</script>
+
+</body>
+</html>

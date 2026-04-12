@@ -34,11 +34,15 @@ state.json is updated
         ↓
 render.py rewrites README.md from the new state
         ↓
-stefanzweifel/git-auto-commit-action commits both files
+build_pages.py injects state.json into web/index.template.html → web/index.html
+        ↓
+stefanzweifel/git-auto-commit-action commits README.md, state.json, web/index.html
         ↓
 GitHub Actions comments the result on the Issue and closes it
         ↓
-Player sees their move reflected on the live README
+deploy_pages.yml detects the push to main, uploads web/ and deploys to GitHub Pages
+        ↓
+Player sees their move on the live README and the GitHub Pages map
 ```
 
 A cron workflow runs every hour at `:17` to tick the world forward — updating scores, firing world events, checking faction dissolution, triggering map expansion.
@@ -51,7 +55,7 @@ A cron workflow runs every hour at `:17` to tick the world forward — updating 
 realm-v2/
 ├── README.md                          # Live game board (auto-generated — do not hand-edit)
 ├── state.json                         # Single source of truth for all game state
-├── docs/                              # This documentation folder
+├── docs/                              # Documentation only (never hand-edit generated files)
 │   ├── README.md                      # Index and update policy
 │   ├── architecture.md                # This file
 │   ├── state-schema.md
@@ -59,17 +63,23 @@ realm-v2/
 │   ├── scripts.md
 │   ├── workflows.md
 │   ├── contributing.md
-│   └── roadmap.md
+│   ├── roadmap.md
+│   └── player-guide.md
+├── web/                               # GitHub Pages source
+│   ├── index.template.html            # Game page template (hand-edit this)
+│   └── index.html                     # Built output (auto-generated — do not hand-edit)
 ├── scripts/
 │   ├── world.py                       # Infinite procedural world generator
 │   ├── engine.py                      # Core game logic (factions, combat, ticks)
 │   ├── render.py                      # README renderer (map, tables, links)
 │   ├── gh_stats.py                    # GitHub public API stat fetcher
-│   └── process_issue.py               # Issue router — entry point for Actions
+│   ├── process_issue.py               # Issue router — entry point for Actions
+│   └── build_pages.py                 # GitHub Pages builder (state.json → web/index.html)
 └── .github/
     ├── workflows/
     │   ├── process_move.yml           # Fires on every new Issue
-    │   └── world_tick.yml             # Hourly cron tick
+    │   ├── world_tick.yml             # Hourly cron tick
+    │   └── deploy_pages.yml           # Deploys web/ to GitHub Pages on push to main
     └── ISSUE_TEMPLATE/
         ├── found_faction.yml
         ├── join_faction.yml

@@ -58,8 +58,9 @@ These constraints must not be violated:
 1. **Only `engine.py` writes to `state.json`** — `world.py` and `render.py` are read-only relative to game state.
 2. **`render.py` is a pure function** — it reads `state.json` and writes `README.md`. It has no other side effects.
 3. **`README.md` is auto-generated** — never hand-edit it. Run `python scripts/render.py` to regenerate it.
-4. **No external dependencies** — Python 3.10+ standard library only. Do not add `requirements.txt` entries or import third-party packages.
-5. **All state time references use `world_age`** — the integer tick counter, not wall-clock time.
+4. **`docs/index.html` is auto-generated** — never hand-edit it. Edit `web/index.template.html`, then run `python scripts/build_pages.py` to regenerate.
+5. **No external dependencies** — Python 3.10+ standard library only. Do not add `requirements.txt` entries or import third-party packages.
+6. **All state time references use `world_age`** — the integer tick counter, not wall-clock time.
 
 ---
 
@@ -86,6 +87,9 @@ An hourly cron workflow (`world_tick.yml`) ticks the world forward — updating 
 - `scripts/render.py` — README renderer (read-only)
 - `scripts/gh_stats.py` — GitHub API fetcher
 - `scripts/process_issue.py` — issue router / orchestration entry point
+- `scripts/build_pages.py` — GitHub Pages builder (injects state into `web/index.template.html`)
+- `web/index.template.html` — edit this to change the game page UI
+- `web/index.html` — auto-generated output, deployed to GitHub Pages via `deploy_pages.yml` (never hand-edit)
 
 ---
 

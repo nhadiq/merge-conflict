@@ -31,3 +31,4 @@ When you change code that affects any of the following, **update the relevant do
 - Workflows (new steps, env vars) → update `workflows.md`
 - New contribution patterns → update `contributing.md`
 - New planned features or resolved limitations → update `roadmap.md`
+- GitHub Pages UI changes → edit `web/index.template.html` (never edit `web/index.html` directly)

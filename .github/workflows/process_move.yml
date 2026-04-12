@@ -35,11 +35,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/process_issue.py
 
+      - name: Build GitHub Pages
+        run: python scripts/build_pages.py
+
       - name: Commit updated state and README
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "⚔️ realm update: ${{ github.event.issue.title }} by @${{ github.event.issue.user.login }}"
-          file_pattern: "README.md state.json"
+          file_pattern: "README.md state.json web/index.html"
           commit_user_name: "realm-bot"
           commit_user_email: "realm-bot@users.noreply.github.com"
 
