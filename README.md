@@ -4,7 +4,9 @@
 > Your code is your army. Your commits are your soldiers.
 > The world grows as the community grows.
 
-**1 warriors · 1 civilizations · 7×7 world · Age 0 · 2026-04-12 15:17 UTC**
+**[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
+
+**1 warriors · 1 civilizations · 7×7 world · Age 0 · 2026-04-12 15:20 UTC**
 
 ---
 
@@ -24,11 +26,11 @@
 ```
 
 **Active Biomes**
-- ❄️🌊⛰️ **The Frozen North**
 - 🌾🛣️🏰 **The Eastern Steppes**
-- 🏜️🔺🌴 **The Ancient Nile**
+- ❄️🌊⛰️ **The Frozen North**
 - ⬜🌲⛰️ **The Ancient Heartland**
 - 🌿🟫🌆 **The Southern Wilds**
+- 🏜️🔺🌴 **The Ancient Nile**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -152,4 +154,4 @@ Factions that lose all territory dissolve after 7 days. Their lands are free for
 ---
 
 <sub>⚔️ merge-conflict — Built on GitHub Actions · Zero install · Zero sign-up · Just GitHub<br>
-Made by <a href="https://github.com/nhadiq">@nhadiq</a> · Star to support the project · Fork to study the engine</sub>
+<a href="https://nhadiq.github.io/merge-conflict/">🌐 Interactive Map</a> · Made by <a href="https://github.com/nhadiq">@nhadiq</a> · Star to support the project · Fork to study the engine</sub>

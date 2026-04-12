@@ -7,12 +7,18 @@ Shows clickable attack grid, live leaderboard, world stats.
 
 import json
 import math
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 import sys
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(Path(__file__).parent))
+
+PAGES_URL = os.environ.get(
+    "PAGES_URL",
+    "https://nhadiq.github.io/merge-conflict/"
+).rstrip("/") + "/"
 from world import get_or_generate_tile, BIOMES
 from engine import _coord
 
@@ -265,6 +271,8 @@ def render_readme(state):
 > Your code is your army. Your commits are your soldiers.
 > The world grows as the community grows.
 
+**[🌐 Play on the interactive map →]({PAGES_URL})**
+
 **{state['player_count']} warriors · {active_factions} civilizations · {total_rows}×{total_cols} world · Age {state['world_age']} · {now}**
 
 ---
@@ -371,7 +379,7 @@ Factions that lose all territory dissolve after 7 days. Their lands are free for
 ---
 
 <sub>⚔️ merge-conflict — Built on GitHub Actions · Zero install · Zero sign-up · Just GitHub<br>
-Made by <a href="https://github.com/nhadiq">@nhadiq</a> · Star to support the project · Fork to study the engine</sub>
+<a href="{PAGES_URL}">🌐 Interactive Map</a> · Made by <a href="https://github.com/nhadiq">@nhadiq</a> · Star to support the project · Fork to study the engine</sub>
 """
 
 if __name__ == "__main__":

@@ -33,9 +33,12 @@ jobs:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python scripts/process_issue.py
 
       - name: Build GitHub Pages
+        env:
+          PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python scripts/build_pages.py
 
       - name: Commit updated state and README
@@ -52,7 +55,7 @@ jobs:
           script: |
             const result = `${{ steps.move.outputs.result }}`;
             const author = context.payload.issue.user.login;
-            const body = `## ⚔️ Your move was processed, @${author}!\n\n${result}\n\n---\n🗺️ [View the updated map](../../blob/main/README.md) · ⚔️ [Make another move](../../issues/new?template=attack.yml)`;
+            const body = `## ⚔️ Your move was processed, @${author}!\n\n${result}\n\n---\n🌐 [Interactive Map](https://${context.repo.owner}.github.io/${context.repo.repo}/) · 🗺️ [README Map](../../blob/main/README.md) · ⚔️ [Make another move](../../issues/new?template=attack.yml)`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
