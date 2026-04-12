@@ -4,24 +4,30 @@
 > Your code is your army. Your commits are your soldiers.
 > The world grows as the community grows.
 
-**0 warriors · 0 civilizations · 5×5 world · Age 0 · 2026-04-12 14:13 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 0 · 2026-04-12 14:58 UTC**
 
 ---
 
 ## 🗺️ The World Map
 
 ```
-     Y  Z  A  B  C 
-  ┌────────────────┐
--2│ 🔵 🌲 ⛰️ ⬜ ⛰️ │
--1│ 🌲 ⛰️ 🌲 ⬜ 🏛️ │
- 0│ 🏜️ ⬜ 🌴 ⬜ 🌲 │
- 1│ 🌴 🏜️ 🌲 🏜️ 🏜️ │
- 2│ 🌲 🔵 ⛰️ ⬜ 🔵 │
-  └────────────────┘
+     X  Y  Z  A  B  C  D 
+  ┌──────────────────────┐
+-3│ 🏛️ 🌊 🗿 ⬜ 🌊 ❄️ 🌴 │
+-2│ 🏜️ 🔴 🌲 ⛰️ ⬜ ⛰️ 🏰 │
+-1│ 🔺 🌲 ⛰️ 🌲 ⬜ 🏛️ 🌾 │
+ 0│ 🏛️ 🏜️ ⬜ 🌴 ⬜ 🌲 🌾 │
+ 1│ 🏜️ 🌴 🏜️ 🌲 🏜️ 🏜️ ⛰️ │
+ 2│ 🔵 🌲 🔵 ⛰️ ⬜ 🔵 🌾 │
+ 3│ 🏛️ 🟢 🌿 🟫 ⬜ 🌿 🌾 │
+  └──────────────────────┘
 ```
 
 **Active Biomes**
+- ❄️🌊⛰️ **The Frozen North**
+- 🌾🛣️🏰 **The Eastern Steppes**
+- 🌿🟫🌆 **The Southern Wilds**
+- 🏜️🔺🌴 **The Ancient Nile**
 - ⬜🌲⛰️ **The Ancient Heartland**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
@@ -32,21 +38,23 @@
 
 > Click a tile to attack it. Your GitHub activity powers your army automatically.
 
-| | Y | Z | A | B | C |
-|---|---|---|---|---|---|
-| **-2** | [🔵](../../issues/new?template=attack.yml&title=ATTACK+-2+-2) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+-2+-1) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+-2+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+-2+1) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+-2+2) |
-| **-1** | [🌲](../../issues/new?template=attack.yml&title=ATTACK+-1+-2) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+-1+-1) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+-1+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+-1+1) | [🏛️](../../issues/new?template=attack.yml&title=ATTACK+-1+2) |
-| **0** | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+0+-2) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+0+-1) | [🌴](../../issues/new?template=attack.yml&title=ATTACK+0+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+0+1) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+0+2) |
-| **1** | [🌴](../../issues/new?template=attack.yml&title=ATTACK+1+-2) | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+1+-1) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+1+0) | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+1+1) | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+1+2) |
-| **2** | [🌲](../../issues/new?template=attack.yml&title=ATTACK+2+-2) | [🔵](../../issues/new?template=attack.yml&title=ATTACK+2+-1) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+2+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+2+1) | [🔵](../../issues/new?template=attack.yml&title=ATTACK+2+2) |
+| | X | Y | Z | A | B | C | D |
+|---|---|---|---|---|---|---|---|
+| **-3** | [🏛️](../../issues/new?template=attack.yml&title=ATTACK+-3+-3) | 🌊 | [🗿](../../issues/new?template=attack.yml&title=ATTACK+-3+-1) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+-3+0) | 🌊 | [❄️](../../issues/new?template=attack.yml&title=ATTACK+-3+2) | [🌴](../../issues/new?template=attack.yml&title=ATTACK+-3+3) |
+| **-2** | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+-2+-3) | [🔴](../../issues/new?template=attack.yml&title=ATTACK+-2+-2) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+-2+-1) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+-2+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+-2+1) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+-2+2) | [🏰](../../issues/new?template=attack.yml&title=ATTACK+-2+3) |
+| **-1** | [🔺](../../issues/new?template=attack.yml&title=ATTACK+-1+-3) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+-1+-2) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+-1+-1) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+-1+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+-1+1) | [🏛️](../../issues/new?template=attack.yml&title=ATTACK+-1+2) | [🌾](../../issues/new?template=attack.yml&title=ATTACK+-1+3) |
+| **0** | [🏛️](../../issues/new?template=attack.yml&title=ATTACK+0+-3) | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+0+-2) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+0+-1) | [🌴](../../issues/new?template=attack.yml&title=ATTACK+0+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+0+1) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+0+2) | [🌾](../../issues/new?template=attack.yml&title=ATTACK+0+3) |
+| **1** | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+1+-3) | [🌴](../../issues/new?template=attack.yml&title=ATTACK+1+-2) | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+1+-1) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+1+0) | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+1+1) | [🏜️](../../issues/new?template=attack.yml&title=ATTACK+1+2) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+1+3) |
+| **2** | [🔵](../../issues/new?template=attack.yml&title=ATTACK+2+-3) | [🌲](../../issues/new?template=attack.yml&title=ATTACK+2+-2) | [🔵](../../issues/new?template=attack.yml&title=ATTACK+2+-1) | [⛰️](../../issues/new?template=attack.yml&title=ATTACK+2+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+2+1) | [🔵](../../issues/new?template=attack.yml&title=ATTACK+2+2) | [🌾](../../issues/new?template=attack.yml&title=ATTACK+2+3) |
+| **3** | [🏛️](../../issues/new?template=attack.yml&title=ATTACK+3+-3) | [🟢](../../issues/new?template=attack.yml&title=ATTACK+3+-2) | [🌿](../../issues/new?template=attack.yml&title=ATTACK+3+-1) | [🟫](../../issues/new?template=attack.yml&title=ATTACK+3+0) | [⬜](../../issues/new?template=attack.yml&title=ATTACK+3+1) | [🌿](../../issues/new?template=attack.yml&title=ATTACK+3+2) | [🌾](../../issues/new?template=attack.yml&title=ATTACK+3+3) |
 
 ---
 
 ## 🏛️ Civilizations
 
-_No civilizations yet. Be the first to rise._
-
-[⚔️ **Found a Civilization →**](../../issues/new?template=found_faction.yml)
+| Rank | Banner | Civilization | Founder | Warriors | Territories | Wonders | Score |
+|------|--------|-------------|---------|----------|-------------|---------|-------|
+| 🥇 | 🔴 | **Glitch** | @nhadiq | 1 | 1 | 0 | **0** |
 
 ---
 
@@ -54,11 +62,11 @@ _No civilizations yet. Be the first to rise._
 
 | Stat | Value |
 |------|-------|
-| 🌍 World size | 5×5 (25 tiles) |
-| ⚔️ Claimed | 0 tiles (0.0%) |
-| 🏛️ Civilizations | 0 active |
-| 👥 Warriors | 0 |
-| ✨ Wonders | 0/0 discovered |
+| 🌍 World size | 7×7 (49 tiles) |
+| ⚔️ Claimed | 1 tiles (2.0%) |
+| 🏛️ Civilizations | 1 active |
+| 👥 Warriors | 1 |
+| ✨ Wonders | 0/1 discovered |
 | 🌐 World Age | 0 |
 
 ---
@@ -67,6 +75,7 @@ _No civilizations yet. Be the first to rise._
 
 ### 1 — Choose your side
 
+- 🔴 **Glitch** — 1 warriors, 1 territories · [Join](../../issues/new?template=join_faction.yml&title=JOIN+glitch)
 
 [⚔️ **Found your own civilization →**](../../issues/new?template=found_faction.yml)
 
@@ -116,7 +125,8 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
-_The world is silent. Be the first to make history._
+- `2026-04-12 14:58 UTC` — 🏛️ **Glitch** rises from the earth! Founded by @nhadiq 🔴
+- `2026-04-12 14:58 UTC` — 🌍 **The known world expands!** 24 new territories emerge beyond the frontier. Radius: 3 tiles.
 
 ---
 
