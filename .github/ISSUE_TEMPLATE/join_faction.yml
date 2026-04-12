@@ -1,0 +1,33 @@
+name: 🤝 Join a Civilization
+description: Pledge loyalty to an existing civilization and join the war
+title: "JOIN "
+labels: ["join-faction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚔️ Join a Civilization
+        
+        Choose your faction and enter the war. Your GitHub activity powers your attacks.
+        
+        **Edit the title above** — change `JOIN ` to `JOIN [faction-slug]`  
+        (e.g. `JOIN empire-of-the-nile` or `JOIN iron-legion`)
+        
+        Check the README for current faction slugs.
+
+  - type: input
+    id: faction_slug
+    attributes:
+      label: Faction Slug
+      description: The short lowercase name of the faction (from the README leaderboard)
+      placeholder: "e.g. iron-legion"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        Once you join, click any tile in the attack grid on the README to start conquering.
+        
+        **Your power comes from your GitHub activity** — commits, PRs, streaks all translate directly into attack and defense strength.

@@ -1,0 +1,59 @@
+name: ⚔️ Attack Territory
+description: Conquer a tile on the world map
+title: "ATTACK "
+labels: ["attack"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚔️ Attack a Territory
+        
+        **Tip:** The fastest way to attack is clicking a tile directly in the README map — it pre-fills the title for you.
+        
+        If filling manually, edit the title to: `ATTACK [row] [col]`  
+        e.g. `ATTACK 3 4` for row 3, column E (4)
+        
+        Rows: 1–10 · Columns: 0–9 (A=0, B=1, ... J=9)
+
+  - type: dropdown
+    id: row
+    attributes:
+      label: Row
+      options: ["1","2","3","4","5","6","7","8","9","10"]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: col
+    attributes:
+      label: Column
+      options:
+        - "0 (A)"
+        - "1 (B)"
+        - "2 (C)"
+        - "3 (D)"
+        - "4 (E)"
+        - "5 (F)"
+        - "6 (G)"
+        - "7 (H)"
+        - "8 (I)"
+        - "9 (J)"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### ⚡ Your Power This Move
+        
+        When you submit, your **live GitHub stats** are fetched automatically:
+        
+        | Activity | Bonus |
+        |----------|-------|
+        | Commits today | +2 ⚔️ Attack each |
+        | Merged PRs (recent) | +3 ⚔️ Attack each |
+        | 7-day commit streak | ⚡ Ignores all terrain defense |
+        | 30-day streak | 👑 Immune to counter-attack for 24h |
+        
+        **Code more. Conquer more.**

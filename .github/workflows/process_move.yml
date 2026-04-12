@@ -1,0 +1,65 @@
+name: ⚔️ Process Move
+
+on:
+  issues:
+    types: [opened]
+
+concurrency:
+  group: realm-update
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Process move
+        id: move
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/process_issue.py
+
+      - name: Commit updated state and README
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "⚔️ realm update: ${{ github.event.issue.title }} by @${{ github.event.issue.user.login }}"
+          file_pattern: "README.md state.json"
+          commit_user_name: "realm-bot"
+          commit_user_email: "realm-bot@users.noreply.github.com"
+
+      - name: Comment on issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const result = `${{ steps.move.outputs.result }}`;
+            const author = context.payload.issue.user.login;
+            const body = `## ⚔️ Your move was processed, @${author}!\n\n${result}\n\n---\n🗺️ [View the updated map](../../blob/main/README.md) · ⚔️ [Make another move](../../issues/new?template=attack.yml)`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+              labels: ['processed']
+            });

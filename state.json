@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "world_age": 0,
+  "last_updated": "",
+  "player_count": 0,
+  "faction_count": 0,
+  "factions": {},
+  "players": {},
+  "tiles": {},
+  "world_bounds": {
+    "min_row": -2,
+    "max_row": 2,
+    "min_col": -2,
+    "max_col": 2
+  },
+  "biome_seeds": {
+    "north": "norse",
+    "south": "carthage",
+    "east": "persia",
+    "west": "egypt"
+  },
+  "wonders": {},
+  "alliances": {},
+  "event_log": [],
+  "hall_of_fame": []
+}

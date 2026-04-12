@@ -1,0 +1,52 @@
+name: ⚔️ Found a Civilization
+description: Claim one of the 4 founding civilization slots and name your empire
+title: "FOUND: "
+labels: ["found-faction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🏛️ Found a Civilization
+        
+        Only **4 civilizations** can exist per season. The first 4 players to claim a slot become **Founders** — with permanent 2x influence and their name in the season records.
+        
+        After submitting, your civilization spawns at a corner of the map. The war begins immediately.
+
+  - type: input
+    id: civilization_name
+    attributes:
+      label: Civilization Name
+      description: What shall your empire be called? (This also sets the Issue title — edit "FOUND:" above to add your name)
+      placeholder: "e.g. Empire of the Nile, Iron Legion, Pharaoh's Chosen..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Civilization Theme
+      description: Choose your cultural roots
+      options:
+        - 🌙 Egyptian — masters of the desert and the Nile
+        - 🦅 Roman — disciplined legions, iron will
+        - ⚡ Norse — raiders, resilient, fearless
+        - 🐘 Carthaginian — merchants turned conquerors
+        - 🏛️ Greek — philosophers who also fight
+        - 🌿 Persian — vast empire, superior logistics
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### ⚡ Your GitHub Power
+        
+        Your army strength is calculated from your **real GitHub activity**:
+        - Commits today → attack power
+        - Merged PRs → bonus attack  
+        - 7-day commit streak → guaranteed territory capture
+        
+        **The more you code, the stronger your empire.**
+        
+        > After submitting, make sure your Issue title reads: `FOUND: [Your Civilization Name]`

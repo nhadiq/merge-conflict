@@ -1,0 +1,42 @@
+name: 🌍 World Tick
+
+on:
+  schedule:
+    - cron: '17 * * * *'   # Every hour at :17 (avoids GH top-of-hour congestion)
+  workflow_dispatch:         # Manual trigger for testing
+
+concurrency:
+  group: realm-update
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run world tick
+        run: python scripts/engine.py tick
+
+      - name: Re-render README
+        run: python scripts/render.py
+
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🌍 World tick — realm.md"
+          file_pattern: "README.md state.json"
+          commit_user_name: "realm-bot"
+          commit_user_email: "realm-bot@users.noreply.github.com"
+          skip_dirty_check: false

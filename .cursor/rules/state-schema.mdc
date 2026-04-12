@@ -1,0 +1,23 @@
+---
+description: State schema rules — always keep state.json and docs/state-schema.md in sync
+globs: state.json
+alwaysApply: false
+---
+
+# State Schema Rules
+
+## Before Editing `state.json`
+
+Read `docs/state-schema.md` to understand the full schema. Do not add fields without understanding how they'll be written by `engine.py` and read by `render.py`.
+
+## Schema Conventions
+
+- Tile keys must follow the `"{row},{col}"` format with signed integers (e.g., `"-3,7"`, `"0,0"`)
+- Faction slugs are lowercase, alphanumeric + hyphens only, max 24 chars
+- Immunity keys follow `immune_{faction_slug}` pattern at top level
+- `world_age` is the universal clock — use it for all time-based game logic
+- `dissolved: true` factions stay in `state.factions` — never delete them
+
+## After Editing the Schema
+
+Update `docs/state-schema.md` with any new or changed fields, including their type, description, and example value.

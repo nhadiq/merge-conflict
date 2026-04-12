@@ -1,0 +1,7 @@
+name: ⚙️ Config
+description: Stop GitHub from prompting users to choose between blank issues and templates
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 How to Play
+    url: https://github.com/nhadiq/realm.md#how-to-play
+    about: Read the full game guide

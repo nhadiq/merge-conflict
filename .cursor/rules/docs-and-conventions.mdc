@@ -1,0 +1,41 @@
+---
+description: Core project conventions for realm-v2 — always read docs before changing code
+alwaysApply: true
+---
+
+# realm-v2 Project Rules
+
+## Read Docs Before Changing Code
+
+Before making **any** code change, read the relevant documentation in the `docs/` folder:
+
+- Changing game mechanics? → Read `docs/game-mechanics.md`
+- Changing script behavior or adding a function? → Read `docs/scripts.md`
+- Changing state shape or adding state fields? → Read `docs/state-schema.md`
+- Changing workflows or CI? → Read `docs/workflows.md`
+- Adding a biome, wonder, or action type? → Read `docs/contributing.md`
+
+Start with `docs/README.md` if you're unsure which doc applies.
+
+## Update Docs After Changing Code
+
+After every code change that affects behavior, **update the corresponding doc in `docs/`**:
+
+| Code changed | Doc to update |
+|-------------|---------------|
+| `engine.py` — game logic | `docs/game-mechanics.md` and/or `docs/scripts.md` |
+| `world.py` — biomes, wonders, tile gen | `docs/game-mechanics.md` and `docs/scripts.md` |
+| `render.py` — rendering behavior | `docs/scripts.md` |
+| `gh_stats.py` — stats or endpoints | `docs/scripts.md` |
+| `process_issue.py` — parsing or routing | `docs/scripts.md` |
+| `state.json` schema fields | `docs/state-schema.md` |
+| `.github/workflows/` | `docs/workflows.md` |
+| New contribution pattern | `docs/contributing.md` |
+| Roadmap item completed or added | `docs/roadmap.md` |
+
+## Architecture Constraints
+
+- **All state mutations go through `engine.py`** — never write to `state.json` from `world.py` or `render.py`
+- **`render.py` is a pure function** — no side effects, only reads state and writes README
+- **`README.md` is auto-generated** — never hand-edit it; run `render.py` instead
+- **No external dependencies** — Python 3.10+ standard library only

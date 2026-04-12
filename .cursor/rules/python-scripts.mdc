@@ -1,0 +1,39 @@
+---
+description: Python code conventions for realm-v2 scripts
+globs: scripts/**/*.py
+alwaysApply: false
+---
+
+# Python Script Conventions
+
+## Before Editing Any Script
+
+Read `docs/scripts.md` to understand the script's purpose, inputs, and outputs. Read `docs/architecture.md` for the data flow and ownership rules.
+
+## State Ownership
+
+- Only `engine.py` mutates `state.json`
+- `world.py` — read-only relative to game state (pure tile generation)
+- `render.py` — read-only relative to game state (pure rendering)
+- `gh_stats.py` — read-only (fetch only, no state writes)
+- `process_issue.py` — orchestration only; delegates mutations to `engine.py`
+
+## Function Contracts
+
+Prefer pure functions: take `state` dict, return `(bool, str)` result tuple, or mutate state in-place with clear documented intent.
+
+```python
+# Good — clear return contract
+def found_faction(state, username, name) -> tuple[bool, str]:
+    ...
+    return True, "Faction founded successfully"
+
+# Good — clear mutation with return
+def world_tick(state) -> str:
+    ...
+    return "Tick complete: 3 events fired"
+```
+
+## After Editing
+
+Update `docs/scripts.md` if you changed a function's signature, purpose, or behavior. Update `docs/state-schema.md` if you added or changed any state fields.
