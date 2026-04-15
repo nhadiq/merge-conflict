@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "world_age": 71,
-  "last_updated": "2026-04-15T17:39:26.234954+00:00",
+  "world_age": 72,
+  "last_updated": "2026-04-15T18:40:15.456159+00:00",
   "player_count": 1,
   "faction_count": 1,
   "factions": {
@@ -36,7 +36,7 @@
       "founded_age": 0,
       "dissolved": false,
       "alliances": [],
-      "last_territory_age": 71
+      "last_territory_age": 72
     }
   },
   "players": {
@@ -389,7 +389,8 @@
     "`2026-04-12 14:58 UTC` \u2014 \ud83c\udfdb\ufe0f **Glitch** rises from the earth! Founded by @nhadiq \ud83d\udd34",
     "`2026-04-12 15:22 UTC` \u2014 \ud83c\udff4 \ud83d\udd34 **Glitch** claimed **Z-2** (Forest)",
     "`2026-04-13 16:41 UTC` \u2014 \u2604\ufe0f **World Event (Age 24):** Comet sighted \u2014 the smallest faction gains +5 attack for 24h.",
-    "`2026-04-14 17:40 UTC` \u2014 \ud83c\udf1f **World Event (Age 48):** Golden Age \u2014 all factions with 5+ members gain +1 morale."
+    "`2026-04-14 17:40 UTC` \u2014 \ud83c\udf1f **World Event (Age 48):** Golden Age \u2014 all factions with 5+ members gain +1 morale.",
+    "`2026-04-15 18:40 UTC` \u2014 \ud83c\udf0d **World Event (Age 72):** Migration wave \u2014 all factions gain 1 free territory claim adjacent to their border."
   ],
   "hall_of_fame": []
 }
