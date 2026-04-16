@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 78 · 2026-04-16 01:04 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 79 · 2026-04-16 01:55 UTC**
 
 ---
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 78 |
+| 🌐 World Age | 79 |
 
 ---
 
