@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "world_age": 119,
-  "last_updated": "2026-04-17T19:38:53.957423+00:00",
+  "world_age": 120,
+  "last_updated": "2026-04-17T20:29:35.090427+00:00",
   "player_count": 1,
   "faction_count": 1,
   "factions": {
@@ -36,7 +36,7 @@
       "founded_age": 0,
       "dissolved": false,
       "alliances": [],
-      "last_territory_age": 119
+      "last_territory_age": 120
     }
   },
   "players": {
@@ -391,7 +391,8 @@
     "`2026-04-13 16:41 UTC` \u2014 \u2604\ufe0f **World Event (Age 24):** Comet sighted \u2014 the smallest faction gains +5 attack for 24h.",
     "`2026-04-14 17:40 UTC` \u2014 \ud83c\udf1f **World Event (Age 48):** Golden Age \u2014 all factions with 5+ members gain +1 morale.",
     "`2026-04-15 18:40 UTC` \u2014 \ud83c\udf0d **World Event (Age 72):** Migration wave \u2014 all factions gain 1 free territory claim adjacent to their border.",
-    "`2026-04-16 19:41 UTC` \u2014 \ud83d\udd4a\ufe0f **World Event (Age 96):** Era of Peace \u2014 defense rolls +3 for this cycle."
+    "`2026-04-16 19:41 UTC` \u2014 \ud83d\udd4a\ufe0f **World Event (Age 96):** Era of Peace \u2014 defense rolls +3 for this cycle.",
+    "`2026-04-17 20:29 UTC` \u2014 \ud83c\udf1f **World Event (Age 120):** Golden Age \u2014 all factions with 5+ members gain +1 morale."
   ],
   "hall_of_fame": []
 }
