@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 167 · 2026-04-19 21:25 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 168 · 2026-04-19 22:25 UTC**
 
 ---
 
@@ -26,11 +26,11 @@
 ```
 
 **Active Biomes**
-- ⬜🌲⛰️ **The Ancient Heartland**
-- 🏜️🔺🌴 **The Ancient Nile**
 - ❄️🌊⛰️ **The Frozen North**
 - 🌿🟫🌆 **The Southern Wilds**
+- 🏜️🔺🌴 **The Ancient Nile**
 - 🌾🛣️🏰 **The Eastern Steppes**
+- ⬜🌲⛰️ **The Ancient Heartland**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 167 |
+| 🌐 World Age | 168 |
 
 ---
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-04-19 22:25 UTC` — 🕊️ **World Event (Age 168):** Era of Peace — defense rolls +3 for this cycle.
 - `2026-04-18 21:25 UTC` — ☄️ **World Event (Age 144):** Comet sighted — the smallest faction gains +5 attack for 24h.
 - `2026-04-17 20:29 UTC` — 🌟 **World Event (Age 120):** Golden Age — all factions with 5+ members gain +1 morale.
 - `2026-04-16 19:41 UTC` — 🕊️ **World Event (Age 96):** Era of Peace — defense rolls +3 for this cycle.
