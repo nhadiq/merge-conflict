@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "world_age": 263,
-  "last_updated": "2026-04-24T03:23:24.139298+00:00",
+  "world_age": 264,
+  "last_updated": "2026-04-24T05:17:03.508133+00:00",
   "player_count": 1,
   "faction_count": 1,
   "factions": {
@@ -36,7 +36,7 @@
       "founded_age": 0,
       "dissolved": false,
       "alliances": [],
-      "last_territory_age": 263
+      "last_territory_age": 264
     }
   },
   "players": {
@@ -397,7 +397,8 @@
     "`2026-04-19 22:25 UTC` \u2014 \ud83d\udd4a\ufe0f **World Event (Age 168):** Era of Peace \u2014 defense rolls +3 for this cycle.",
     "`2026-04-21 01:03 UTC` \u2014 \u2744\ufe0f **World Event (Age 192):** Blizzard in the North \u2014 Norse biome tiles gain +2 defense.",
     "`2026-04-22 01:55 UTC` \u2014 \u2604\ufe0f **World Event (Age 216):** Comet sighted \u2014 the smallest faction gains +5 attack for 24h.",
-    "`2026-04-23 03:23 UTC` \u2014 \ud83c\udf0a **World Event (Age 240):** The Nile floods \u2014 all river tiles produce double morale bonus."
+    "`2026-04-23 03:23 UTC` \u2014 \ud83c\udf0a **World Event (Age 240):** The Nile floods \u2014 all river tiles produce double morale bonus.",
+    "`2026-04-24 05:17 UTC` \u2014 \ud83c\udffa **World Event (Age 264):** Ancient relics unearthed \u2014 ruins and lost city tiles grant double score."
   ],
   "hall_of_fame": []
 }
