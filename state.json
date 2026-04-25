@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "world_age": 287,
-  "last_updated": "2026-04-25T05:01:51.552854+00:00",
+  "world_age": 288,
+  "last_updated": "2026-04-25T05:52:41.554673+00:00",
   "player_count": 1,
   "faction_count": 1,
   "factions": {
@@ -36,7 +36,7 @@
       "founded_age": 0,
       "dissolved": false,
       "alliances": [],
-      "last_territory_age": 287
+      "last_territory_age": 288
     }
   },
   "players": {
@@ -398,7 +398,8 @@
     "`2026-04-21 01:03 UTC` \u2014 \u2744\ufe0f **World Event (Age 192):** Blizzard in the North \u2014 Norse biome tiles gain +2 defense.",
     "`2026-04-22 01:55 UTC` \u2014 \u2604\ufe0f **World Event (Age 216):** Comet sighted \u2014 the smallest faction gains +5 attack for 24h.",
     "`2026-04-23 03:23 UTC` \u2014 \ud83c\udf0a **World Event (Age 240):** The Nile floods \u2014 all river tiles produce double morale bonus.",
-    "`2026-04-24 05:17 UTC` \u2014 \ud83c\udffa **World Event (Age 264):** Ancient relics unearthed \u2014 ruins and lost city tiles grant double score."
+    "`2026-04-24 05:17 UTC` \u2014 \ud83c\udffa **World Event (Age 264):** Ancient relics unearthed \u2014 ruins and lost city tiles grant double score.",
+    "`2026-04-25 05:52 UTC` \u2014 \ud83c\udf2a\ufe0f **World Event (Age 288):** Sandstorm sweeps the desert \u2014 desert tiles grant +1 defense until next dawn."
   ],
   "hall_of_fame": []
 }
