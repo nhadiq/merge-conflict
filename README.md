@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 335 · 2026-04-27 09:06 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 336 · 2026-04-27 09:59 UTC**
 
 ---
 
@@ -26,11 +26,11 @@
 ```
 
 **Active Biomes**
+- 🌿🟫🌆 **The Southern Wilds**
+- 🏜️🔺🌴 **The Ancient Nile**
+- ❄️🌊⛰️ **The Frozen North**
 - ⬜🌲⛰️ **The Ancient Heartland**
 - 🌾🛣️🏰 **The Eastern Steppes**
-- ❄️🌊⛰️ **The Frozen North**
-- 🏜️🔺🌴 **The Ancient Nile**
-- 🌿🟫🌆 **The Southern Wilds**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 335 |
+| 🌐 World Age | 336 |
 
 ---
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-04-27 09:59 UTC` — 🌟 **World Event (Age 336):** Golden Age — all factions with 5+ members gain +1 morale.
 - `2026-04-26 07:51 UTC` — 🌟 **World Event (Age 312):** Golden Age — all factions with 5+ members gain +1 morale.
 - `2026-04-25 05:52 UTC` — 🌪️ **World Event (Age 288):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
 - `2026-04-24 05:17 UTC` — 🏺 **World Event (Age 264):** Ancient relics unearthed — ruins and lost city tiles grant double score.
@@ -138,7 +139,6 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-04-17 20:29 UTC` — 🌟 **World Event (Age 120):** Golden Age — all factions with 5+ members gain +1 morale.
 - `2026-04-16 19:41 UTC` — 🕊️ **World Event (Age 96):** Era of Peace — defense rolls +3 for this cycle.
 - `2026-04-15 18:40 UTC` — 🌍 **World Event (Age 72):** Migration wave — all factions gain 1 free territory claim adjacent to their border.
-- `2026-04-14 17:40 UTC` — 🌟 **World Event (Age 48):** Golden Age — all factions with 5+ members gain +1 morale.
 
 ---
 
