@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "world_age": 359,
-  "last_updated": "2026-04-28T10:56:08.698159+00:00",
+  "world_age": 360,
+  "last_updated": "2026-04-28T11:53:05.343752+00:00",
   "player_count": 1,
   "faction_count": 1,
   "factions": {
@@ -36,7 +36,7 @@
       "founded_age": 0,
       "dissolved": false,
       "alliances": [],
-      "last_territory_age": 359
+      "last_territory_age": 360
     }
   },
   "players": {
@@ -401,7 +401,8 @@
     "`2026-04-24 05:17 UTC` \u2014 \ud83c\udffa **World Event (Age 264):** Ancient relics unearthed \u2014 ruins and lost city tiles grant double score.",
     "`2026-04-25 05:52 UTC` \u2014 \ud83c\udf2a\ufe0f **World Event (Age 288):** Sandstorm sweeps the desert \u2014 desert tiles grant +1 defense until next dawn.",
     "`2026-04-26 07:51 UTC` \u2014 \ud83c\udf1f **World Event (Age 312):** Golden Age \u2014 all factions with 5+ members gain +1 morale.",
-    "`2026-04-27 09:59 UTC` \u2014 \ud83c\udf1f **World Event (Age 336):** Golden Age \u2014 all factions with 5+ members gain +1 morale."
+    "`2026-04-27 09:59 UTC` \u2014 \ud83c\udf1f **World Event (Age 336):** Golden Age \u2014 all factions with 5+ members gain +1 morale.",
+    "`2026-04-28 11:53 UTC` \u2014 \u2694\ufe0f **World Event (Age 360):** Age of War \u2014 all attack rolls +2 for this cycle."
   ],
   "hall_of_fame": []
 }
