@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 431 · 2026-05-01 16:34 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 432 · 2026-05-01 17:35 UTC**
 
 ---
 
@@ -26,11 +26,11 @@
 ```
 
 **Active Biomes**
-- ❄️🌊⛰️ **The Frozen North**
-- 🏜️🔺🌴 **The Ancient Nile**
-- 🌾🛣️🏰 **The Eastern Steppes**
-- 🌿🟫🌆 **The Southern Wilds**
 - ⬜🌲⛰️ **The Ancient Heartland**
+- 🏜️🔺🌴 **The Ancient Nile**
+- 🌿🟫🌆 **The Southern Wilds**
+- 🌾🛣️🏰 **The Eastern Steppes**
+- ❄️🌊⛰️ **The Frozen North**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 431 |
+| 🌐 World Age | 432 |
 
 ---
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-05-01 17:35 UTC` — ⚔️ **World Event (Age 432):** Age of War — all attack rolls +2 for this cycle.
 - `2026-04-30 15:52 UTC` — ⚔️ **World Event (Age 408):** Age of War — all attack rolls +2 for this cycle.
 - `2026-04-29 13:54 UTC` — 🌊 **World Event (Age 384):** The Nile floods — all river tiles produce double morale bonus.
 - `2026-04-28 11:53 UTC` — ⚔️ **World Event (Age 360):** Age of War — all attack rolls +2 for this cycle.
@@ -138,7 +139,6 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-04-22 01:55 UTC` — ☄️ **World Event (Age 216):** Comet sighted — the smallest faction gains +5 attack for 24h.
 - `2026-04-21 01:03 UTC` — ❄️ **World Event (Age 192):** Blizzard in the North — Norse biome tiles gain +2 defense.
 - `2026-04-19 22:25 UTC` — 🕊️ **World Event (Age 168):** Era of Peace — defense rolls +3 for this cycle.
-- `2026-04-18 21:25 UTC` — ☄️ **World Event (Age 144):** Comet sighted — the smallest faction gains +5 attack for 24h.
 
 ---
 
