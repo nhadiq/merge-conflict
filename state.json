@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "world_age": 455,
-  "last_updated": "2026-05-02T18:33:30.895842+00:00",
+  "world_age": 456,
+  "last_updated": "2026-05-02T19:37:01.660472+00:00",
   "player_count": 1,
   "faction_count": 1,
   "factions": {
@@ -36,7 +36,7 @@
       "founded_age": 0,
       "dissolved": false,
       "alliances": [],
-      "last_territory_age": 455
+      "last_territory_age": 456
     }
   },
   "players": {
@@ -405,7 +405,8 @@
     "`2026-04-28 11:53 UTC` \u2014 \u2694\ufe0f **World Event (Age 360):** Age of War \u2014 all attack rolls +2 for this cycle.",
     "`2026-04-29 13:54 UTC` \u2014 \ud83c\udf0a **World Event (Age 384):** The Nile floods \u2014 all river tiles produce double morale bonus.",
     "`2026-04-30 15:52 UTC` \u2014 \u2694\ufe0f **World Event (Age 408):** Age of War \u2014 all attack rolls +2 for this cycle.",
-    "`2026-05-01 17:35 UTC` \u2014 \u2694\ufe0f **World Event (Age 432):** Age of War \u2014 all attack rolls +2 for this cycle."
+    "`2026-05-01 17:35 UTC` \u2014 \u2694\ufe0f **World Event (Age 432):** Age of War \u2014 all attack rolls +2 for this cycle.",
+    "`2026-05-02 19:37 UTC` \u2014 \ud83d\udd4a\ufe0f **World Event (Age 456):** Era of Peace \u2014 defense rolls +3 for this cycle."
   ],
   "hall_of_fame": []
 }
