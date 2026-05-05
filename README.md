@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 503 · 2026-05-05 01:04 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 504 · 2026-05-05 01:55 UTC**
 
 ---
 
@@ -27,10 +27,10 @@
 
 **Active Biomes**
 - ❄️🌊⛰️ **The Frozen North**
+- ⬜🌲⛰️ **The Ancient Heartland**
+- 🌿🟫🌆 **The Southern Wilds**
 - 🏜️🔺🌴 **The Ancient Nile**
 - 🌾🛣️🏰 **The Eastern Steppes**
-- 🌿🟫🌆 **The Southern Wilds**
-- ⬜🌲⛰️ **The Ancient Heartland**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 503 |
+| 🌐 World Age | 504 |
 
 ---
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-05-05 01:55 UTC` — 🌊 **World Event (Age 504):** The Nile floods — all river tiles produce double morale bonus.
 - `2026-05-03 21:28 UTC` — 🌋 **World Event (Age 480):** Eruption — volcano tiles deal -2 to any attacker this cycle.
 - `2026-05-02 19:37 UTC` — 🕊️ **World Event (Age 456):** Era of Peace — defense rolls +3 for this cycle.
 - `2026-05-01 17:35 UTC` — ⚔️ **World Event (Age 432):** Age of War — all attack rolls +2 for this cycle.
@@ -138,7 +139,6 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-04-25 05:52 UTC` — 🌪️ **World Event (Age 288):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
 - `2026-04-24 05:17 UTC` — 🏺 **World Event (Age 264):** Ancient relics unearthed — ruins and lost city tiles grant double score.
 - `2026-04-23 03:23 UTC` — 🌊 **World Event (Age 240):** The Nile floods — all river tiles produce double morale bonus.
-- `2026-04-22 01:55 UTC` — ☄️ **World Event (Age 216):** Comet sighted — the smallest faction gains +5 attack for 24h.
 
 ---
 
