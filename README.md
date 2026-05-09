@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 599 · 2026-05-09 12:36 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 600 · 2026-05-09 13:48 UTC**
 
 ---
 
@@ -26,11 +26,11 @@
 ```
 
 **Active Biomes**
-- 🌾🛣️🏰 **The Eastern Steppes**
-- ❄️🌊⛰️ **The Frozen North**
-- 🌿🟫🌆 **The Southern Wilds**
-- ⬜🌲⛰️ **The Ancient Heartland**
 - 🏜️🔺🌴 **The Ancient Nile**
+- ❄️🌊⛰️ **The Frozen North**
+- ⬜🌲⛰️ **The Ancient Heartland**
+- 🌾🛣️🏰 **The Eastern Steppes**
+- 🌿🟫🌆 **The Southern Wilds**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 599 |
+| 🌐 World Age | 600 |
 
 ---
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-05-09 13:48 UTC` — ☄️ **World Event (Age 600):** Comet sighted — the smallest faction gains +5 attack for 24h.
 - `2026-05-08 11:46 UTC` — 🌊 **World Event (Age 576):** The Nile floods — all river tiles produce double morale bonus.
 - `2026-05-07 10:56 UTC` — ☄️ **World Event (Age 552):** Comet sighted — the smallest faction gains +5 attack for 24h.
 - `2026-05-06 07:58 UTC` — 🌟 **World Event (Age 528):** Golden Age — all factions with 5+ members gain +1 morale.
@@ -138,7 +139,6 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-04-29 13:54 UTC` — 🌊 **World Event (Age 384):** The Nile floods — all river tiles produce double morale bonus.
 - `2026-04-28 11:53 UTC` — ⚔️ **World Event (Age 360):** Age of War — all attack rolls +2 for this cycle.
 - `2026-04-27 09:59 UTC` — 🌟 **World Event (Age 336):** Golden Age — all factions with 5+ members gain +1 morale.
-- `2026-04-26 07:51 UTC` — 🌟 **World Event (Age 312):** Golden Age — all factions with 5+ members gain +1 morale.
 
 ---
 
