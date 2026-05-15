@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "world_age": 719,
-  "last_updated": "2026-05-15T11:03:40.065172+00:00",
+  "world_age": 720,
+  "last_updated": "2026-05-15T11:54:43.038170+00:00",
   "player_count": 1,
   "faction_count": 1,
   "factions": {
@@ -36,7 +36,7 @@
       "founded_age": 0,
       "dissolved": false,
       "alliances": [],
-      "last_territory_age": 719
+      "last_territory_age": 720
     }
   },
   "players": {
@@ -385,8 +385,6 @@
   "wonders": {},
   "alliances": {},
   "event_log": [
-    "`2026-04-12 15:22 UTC` \u2014 \ud83c\udff4 \ud83d\udd34 **Glitch** claimed **Z-2** (Forest)",
-    "`2026-04-13 16:41 UTC` \u2014 \u2604\ufe0f **World Event (Age 24):** Comet sighted \u2014 the smallest faction gains +5 attack for 24h.",
     "`2026-04-14 17:40 UTC` \u2014 \ud83c\udf1f **World Event (Age 48):** Golden Age \u2014 all factions with 5+ members gain +1 morale.",
     "`2026-04-15 18:40 UTC` \u2014 \ud83c\udf0d **World Event (Age 72):** Migration wave \u2014 all factions gain 1 free territory claim adjacent to their border.",
     "`2026-04-16 19:41 UTC` \u2014 \ud83d\udd4a\ufe0f **World Event (Age 96):** Era of Peace \u2014 defense rolls +3 for this cycle.",
@@ -414,7 +412,18 @@
     "`2026-05-10 15:34 UTC` \u2014 \ud83c\udf1f **World Event (Age 624):** Golden Age \u2014 all factions with 5+ members gain +1 morale.",
     "`2026-05-11 22:35 UTC` \u2014 \ud83c\udf2a\ufe0f **World Event (Age 648):** Sandstorm sweeps the desert \u2014 desert tiles grant +1 defense until next dawn.",
     "`2026-05-13 01:13 UTC` \u2014 \ud83c\udf2a\ufe0f **World Event (Age 672):** Sandstorm sweeps the desert \u2014 desert tiles grant +1 defense until next dawn.",
-    "`2026-05-14 07:18 UTC` \u2014 \ud83c\udf0d **World Event (Age 696):** Migration wave \u2014 all factions gain 1 free territory claim adjacent to their border."
+    "`2026-05-14 07:18 UTC` \u2014 \ud83c\udf0d **World Event (Age 696):** Migration wave \u2014 all factions gain 1 free territory claim adjacent to their border.",
+    "`2026-05-15 11:54 UTC` \u2014 \ud83c\udf0d **World Event (Age 720):** Migration wave \u2014 all factions gain 1 free territory claim adjacent to their border.",
+    "`2026-05-15 11:54 UTC` \u2014 \ud83d\udcdc **Hall of Fame:** \ud83d\udd34 **Glitch** leads the world at Age 720 with 25 glory."
   ],
-  "hall_of_fame": []
+  "hall_of_fame": [
+    {
+      "age": 720,
+      "faction": "Glitch",
+      "banner": "\ud83d\udd34",
+      "founder": "nhadiq",
+      "score": 25,
+      "territories": 2
+    }
+  ]
 }

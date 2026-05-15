@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 719 · 2026-05-15 11:03 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 720 · 2026-05-15 11:54 UTC**
 
 ---
 
@@ -27,10 +27,10 @@
 
 **Active Biomes**
 - 🏜️🔺🌴 **The Ancient Nile**
-- 🌿🟫🌆 **The Southern Wilds**
-- ⬜🌲⛰️ **The Ancient Heartland**
-- ❄️🌊⛰️ **The Frozen North**
 - 🌾🛣️🏰 **The Eastern Steppes**
+- 🌿🟫🌆 **The Southern Wilds**
+- ❄️🌊⛰️ **The Frozen North**
+- ⬜🌲⛰️ **The Ancient Heartland**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 719 |
+| 🌐 World Age | 720 |
 
 ---
 
@@ -127,6 +127,8 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-05-15 11:54 UTC` — 📜 **Hall of Fame:** 🔴 **Glitch** leads the world at Age 720 with 25 glory.
+- `2026-05-15 11:54 UTC` — 🌍 **World Event (Age 720):** Migration wave — all factions gain 1 free territory claim adjacent to their border.
 - `2026-05-14 07:18 UTC` — 🌍 **World Event (Age 696):** Migration wave — all factions gain 1 free territory claim adjacent to their border.
 - `2026-05-13 01:13 UTC` — 🌪️ **World Event (Age 672):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
 - `2026-05-11 22:35 UTC` — 🌪️ **World Event (Age 648):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
@@ -137,14 +139,14 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-05-06 07:58 UTC` — 🌟 **World Event (Age 528):** Golden Age — all factions with 5+ members gain +1 morale.
 - `2026-05-05 01:55 UTC` — 🌊 **World Event (Age 504):** The Nile floods — all river tiles produce double morale bonus.
 - `2026-05-03 21:28 UTC` — 🌋 **World Event (Age 480):** Eruption — volcano tiles deal -2 to any attacker this cycle.
-- `2026-05-02 19:37 UTC` — 🕊️ **World Event (Age 456):** Era of Peace — defense rolls +3 for this cycle.
-- `2026-05-01 17:35 UTC` — ⚔️ **World Event (Age 432):** Age of War — all attack rolls +2 for this cycle.
 
 ---
 
 ## 🏆 Hall of Fame
 
-_The chronicles are unwritten. History begins now._
+| Age | Civilization | Founder | Score | Territories |
+|-----|-------------|---------|-------|-------------|
+| 720 | 🔴 **Glitch** | @nhadiq | 25 | 2 |
 
 ---
 
