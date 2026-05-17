@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 766 · 2026-05-17 13:51 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 767 · 2026-05-17 14:40 UTC**
 
 ---
 
@@ -26,11 +26,11 @@
 ```
 
 **Active Biomes**
+- ⬜🌲⛰️ **The Ancient Heartland**
 - 🌿🟫🌆 **The Southern Wilds**
 - 🏜️🔺🌴 **The Ancient Nile**
-- ⬜🌲⛰️ **The Ancient Heartland**
-- ❄️🌊⛰️ **The Frozen North**
 - 🌾🛣️🏰 **The Eastern Steppes**
+- ❄️🌊⛰️ **The Frozen North**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 766 |
+| 🌐 World Age | 767 |
 
 ---
 
