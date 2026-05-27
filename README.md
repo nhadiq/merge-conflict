@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 887 · 2026-05-27 19:03 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 888 · 2026-05-27 19:56 UTC**
 
 ---
 
@@ -26,11 +26,11 @@
 ```
 
 **Active Biomes**
-- ⬜🌲⛰️ **The Ancient Heartland**
-- ❄️🌊⛰️ **The Frozen North**
 - 🏜️🔺🌴 **The Ancient Nile**
-- 🌾🛣️🏰 **The Eastern Steppes**
+- ❄️🌊⛰️ **The Frozen North**
 - 🌿🟫🌆 **The Southern Wilds**
+- ⬜🌲⛰️ **The Ancient Heartland**
+- 🌾🛣️🏰 **The Eastern Steppes**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 887 |
+| 🌐 World Age | 888 |
 
 ---
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-05-27 19:56 UTC` — 🏺 **World Event (Age 888):** Ancient relics unearthed — ruins and lost city tiles grant double score.
 - `2026-05-23 08:56 UTC` — 🌪️ **World Event (Age 864):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
 - `2026-05-21 23:36 UTC` — 🔥 **World Event (Age 840):** Wildfire — jungle tiles in contested areas become neutral.
 - `2026-05-20 14:11 UTC` — 🌊 **World Event (Age 816):** The Nile floods — all river tiles produce double morale bonus.
@@ -138,7 +139,6 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-05-14 07:18 UTC` — 🌍 **World Event (Age 696):** Migration wave — all factions gain 1 free territory claim adjacent to their border.
 - `2026-05-13 01:13 UTC` — 🌪️ **World Event (Age 672):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
 - `2026-05-11 22:35 UTC` — 🌪️ **World Event (Age 648):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
-- `2026-05-10 15:34 UTC` — 🌟 **World Event (Age 624):** Golden Age — all factions with 5+ members gain +1 morale.
 
 ---
 
