@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "world_age": 911,
-  "last_updated": "2026-05-29T05:41:19.872094+00:00",
+  "world_age": 912,
+  "last_updated": "2026-05-29T07:38:37.822321+00:00",
   "player_count": 1,
   "faction_count": 1,
   "factions": {
@@ -36,7 +36,7 @@
       "founded_age": 0,
       "dissolved": false,
       "alliances": [],
-      "last_territory_age": 911
+      "last_territory_age": 912
     }
   },
   "players": {
@@ -385,7 +385,6 @@
   "wonders": {},
   "alliances": {},
   "event_log": [
-    "`2026-04-22 01:55 UTC` \u2014 \u2604\ufe0f **World Event (Age 216):** Comet sighted \u2014 the smallest faction gains +5 attack for 24h.",
     "`2026-04-23 03:23 UTC` \u2014 \ud83c\udf0a **World Event (Age 240):** The Nile floods \u2014 all river tiles produce double morale bonus.",
     "`2026-04-24 05:17 UTC` \u2014 \ud83c\udffa **World Event (Age 264):** Ancient relics unearthed \u2014 ruins and lost city tiles grant double score.",
     "`2026-04-25 05:52 UTC` \u2014 \ud83c\udf2a\ufe0f **World Event (Age 288):** Sandstorm sweeps the desert \u2014 desert tiles grant +1 defense until next dawn.",
@@ -414,7 +413,8 @@
     "`2026-05-20 14:11 UTC` \u2014 \ud83c\udf0a **World Event (Age 816):** The Nile floods \u2014 all river tiles produce double morale bonus.",
     "`2026-05-21 23:36 UTC` \u2014 \ud83d\udd25 **World Event (Age 840):** Wildfire \u2014 jungle tiles in contested areas become neutral.",
     "`2026-05-23 08:56 UTC` \u2014 \ud83c\udf2a\ufe0f **World Event (Age 864):** Sandstorm sweeps the desert \u2014 desert tiles grant +1 defense until next dawn.",
-    "`2026-05-27 19:56 UTC` \u2014 \ud83c\udffa **World Event (Age 888):** Ancient relics unearthed \u2014 ruins and lost city tiles grant double score."
+    "`2026-05-27 19:56 UTC` \u2014 \ud83c\udffa **World Event (Age 888):** Ancient relics unearthed \u2014 ruins and lost city tiles grant double score.",
+    "`2026-05-29 07:38 UTC` \u2014 \u2744\ufe0f **World Event (Age 912):** Blizzard in the North \u2014 Norse biome tiles gain +2 defense."
   ],
   "hall_of_fame": [
     {
