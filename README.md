@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 935 · 2026-05-30 14:47 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 936 · 2026-05-30 15:41 UTC**
 
 ---
 
@@ -26,11 +26,11 @@
 ```
 
 **Active Biomes**
-- 🏜️🔺🌴 **The Ancient Nile**
 - 🌾🛣️🏰 **The Eastern Steppes**
 - ❄️🌊⛰️ **The Frozen North**
-- ⬜🌲⛰️ **The Ancient Heartland**
 - 🌿🟫🌆 **The Southern Wilds**
+- ⬜🌲⛰️ **The Ancient Heartland**
+- 🏜️🔺🌴 **The Ancient Nile**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 935 |
+| 🌐 World Age | 936 |
 
 ---
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-05-30 15:41 UTC` — 🌋 **World Event (Age 936):** Eruption — volcano tiles deal -2 to any attacker this cycle.
 - `2026-05-29 07:38 UTC` — ❄️ **World Event (Age 912):** Blizzard in the North — Norse biome tiles gain +2 defense.
 - `2026-05-27 19:56 UTC` — 🏺 **World Event (Age 888):** Ancient relics unearthed — ruins and lost city tiles grant double score.
 - `2026-05-23 08:56 UTC` — 🌪️ **World Event (Age 864):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
@@ -138,7 +139,6 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-05-15 11:54 UTC` — 📜 **Hall of Fame:** 🔴 **Glitch** leads the world at Age 720 with 25 glory.
 - `2026-05-15 11:54 UTC` — 🌍 **World Event (Age 720):** Migration wave — all factions gain 1 free territory claim adjacent to their border.
 - `2026-05-14 07:18 UTC` — 🌍 **World Event (Age 696):** Migration wave — all factions gain 1 free territory claim adjacent to their border.
-- `2026-05-13 01:13 UTC` — 🌪️ **World Event (Age 672):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
 
 ---
 
