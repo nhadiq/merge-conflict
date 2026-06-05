@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 1031 · 2026-06-05 21:45 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 1032 · 2026-06-05 22:39 UTC**
 
 ---
 
@@ -26,11 +26,11 @@
 ```
 
 **Active Biomes**
+- 🏜️🔺🌴 **The Ancient Nile**
+- 🌾🛣️🏰 **The Eastern Steppes**
+- 🌿🟫🌆 **The Southern Wilds**
 - ❄️🌊⛰️ **The Frozen North**
 - ⬜🌲⛰️ **The Ancient Heartland**
-- 🏜️🔺🌴 **The Ancient Nile**
-- 🌿🟫🌆 **The Southern Wilds**
-- 🌾🛣️🏰 **The Eastern Steppes**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 1031 |
+| 🌐 World Age | 1032 |
 
 ---
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-06-05 22:39 UTC` — ❄️ **World Event (Age 1032):** Blizzard in the North — Norse biome tiles gain +2 defense.
 - `2026-06-04 11:22 UTC` — 🌪️ **World Event (Age 1008):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
 - `2026-06-02 15:40 UTC` — 🕊️ **World Event (Age 984):** Era of Peace — defense rolls +3 for this cycle.
 - `2026-05-31 20:37 UTC` — 🌍 **World Event (Age 960):** Migration wave — all factions gain 1 free territory claim adjacent to their border.
@@ -138,7 +139,6 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-05-20 14:11 UTC` — 🌊 **World Event (Age 816):** The Nile floods — all river tiles produce double morale bonus.
 - `2026-05-18 23:37 UTC` — 🏺 **World Event (Age 792):** Ancient relics unearthed — ruins and lost city tiles grant double score.
 - `2026-05-17 15:38 UTC` — 🌍 **World Event (Age 768):** Migration wave — all factions gain 1 free territory claim adjacent to their border.
-- `2026-05-16 13:51 UTC` — 🕊️ **World Event (Age 744):** Era of Peace — defense rolls +3 for this cycle.
 
 ---
 
