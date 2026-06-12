@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 1151 · 2026-06-12 22:46 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 1152 · 2026-06-12 23:47 UTC**
 
 ---
 
@@ -26,11 +26,11 @@
 ```
 
 **Active Biomes**
-- 🌿🟫🌆 **The Southern Wilds**
-- ⬜🌲⛰️ **The Ancient Heartland**
-- 🌾🛣️🏰 **The Eastern Steppes**
-- 🏜️🔺🌴 **The Ancient Nile**
 - ❄️🌊⛰️ **The Frozen North**
+- 🏜️🔺🌴 **The Ancient Nile**
+- ⬜🌲⛰️ **The Ancient Heartland**
+- 🌿🟫🌆 **The Southern Wilds**
+- 🌾🛣️🏰 **The Eastern Steppes**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 1151 |
+| 🌐 World Age | 1152 |
 
 ---
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-06-12 23:47 UTC` — 🌊 **World Event (Age 1152):** The Nile floods — all river tiles produce double morale bonus.
 - `2026-06-11 13:41 UTC` — ⚔️ **World Event (Age 1128):** Age of War — all attack rolls +2 for this cycle.
 - `2026-06-09 21:52 UTC` — 🌊 **World Event (Age 1104):** The Nile floods — all river tiles produce double morale bonus.
 - `2026-06-08 13:45 UTC` — 🔥 **World Event (Age 1080):** Wildfire — jungle tiles in contested areas become neutral.
@@ -138,7 +139,6 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-05-30 15:41 UTC` — 🌋 **World Event (Age 936):** Eruption — volcano tiles deal -2 to any attacker this cycle.
 - `2026-05-29 07:38 UTC` — ❄️ **World Event (Age 912):** Blizzard in the North — Norse biome tiles gain +2 defense.
 - `2026-05-27 19:56 UTC` — 🏺 **World Event (Age 888):** Ancient relics unearthed — ruins and lost city tiles grant double score.
-- `2026-05-23 08:56 UTC` — 🌪️ **World Event (Age 864):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
 
 ---
 
