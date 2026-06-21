@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "world_age": 1288,
-  "last_updated": "2026-06-21T13:55:01.705104+00:00",
+  "world_age": 1289,
+  "last_updated": "2026-06-21T15:02:11.180853+00:00",
   "player_count": 1,
   "faction_count": 1,
   "factions": {
@@ -36,7 +36,7 @@
       "founded_age": 0,
       "dissolved": false,
       "alliances": [],
-      "last_territory_age": 1288
+      "last_territory_age": 1289
     }
   },
   "players": {
