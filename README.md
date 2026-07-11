@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 1439 · 2026-07-11 21:31 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 1440 · 2026-07-11 22:30 UTC**
 
 ---
 
@@ -26,10 +26,10 @@
 ```
 
 **Active Biomes**
+- ⬜🌲⛰️ **The Ancient Heartland**
+- 🌿🟫🌆 **The Southern Wilds**
 - ❄️🌊⛰️ **The Frozen North**
 - 🏜️🔺🌴 **The Ancient Nile**
-- 🌿🟫🌆 **The Southern Wilds**
-- ⬜🌲⛰️ **The Ancient Heartland**
 - 🌾🛣️🏰 **The Eastern Steppes**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 1439 |
+| 🌐 World Age | 1440 |
 
 ---
 
@@ -127,6 +127,8 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-07-11 22:30 UTC` — 📜 **Hall of Fame:** 🔴 **Glitch** leads the world at Age 1440 with 25 glory.
+- `2026-07-11 22:30 UTC` — 🌪️ **World Event (Age 1440):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
 - `2026-07-10 20:44 UTC` — 🏺 **World Event (Age 1416):** Ancient relics unearthed — ruins and lost city tiles grant double score.
 - `2026-07-09 15:22 UTC` — 🔥 **World Event (Age 1392):** Wildfire — jungle tiles in contested areas become neutral.
 - `2026-07-08 09:59 UTC` — 🌊 **World Event (Age 1368):** The Nile floods — all river tiles produce double morale bonus.
@@ -137,8 +139,6 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-06-19 05:59 UTC` — 🔥 **World Event (Age 1248):** Wildfire — jungle tiles in contested areas become neutral.
 - `2026-06-17 17:19 UTC` — 🔥 **World Event (Age 1224):** Wildfire — jungle tiles in contested areas become neutral.
 - `2026-06-15 22:03 UTC` — 🌟 **World Event (Age 1200):** Golden Age — all factions with 5+ members gain +1 morale.
-- `2026-06-14 09:24 UTC` — 🌟 **World Event (Age 1176):** Golden Age — all factions with 5+ members gain +1 morale.
-- `2026-06-12 23:47 UTC` — 🌊 **World Event (Age 1152):** The Nile floods — all river tiles produce double morale bonus.
 
 ---
 
@@ -146,6 +146,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 | Age | Civilization | Founder | Score | Territories |
 |-----|-------------|---------|-------|-------------|
+| 1440 | 🔴 **Glitch** | @nhadiq | 25 | 2 |
 | 720 | 🔴 **Glitch** | @nhadiq | 25 | 2 |
 
 ---
