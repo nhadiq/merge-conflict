@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 1487 · 2026-07-14 05:58 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 1488 · 2026-07-14 06:58 UTC**
 
 ---
 
@@ -26,9 +26,9 @@
 ```
 
 **Active Biomes**
+- 🌿🟫🌆 **The Southern Wilds**
 - 🏜️🔺🌴 **The Ancient Nile**
 - ❄️🌊⛰️ **The Frozen North**
-- 🌿🟫🌆 **The Southern Wilds**
 - ⬜🌲⛰️ **The Ancient Heartland**
 - 🌾🛣️🏰 **The Eastern Steppes**
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 1487 |
+| 🌐 World Age | 1488 |
 
 ---
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-07-14 06:58 UTC` — ☄️ **World Event (Age 1488):** Comet sighted — the smallest faction gains +5 attack for 24h.
 - `2026-07-13 00:56 UTC` — 🌟 **World Event (Age 1464):** Golden Age — all factions with 5+ members gain +1 morale.
 - `2026-07-11 22:30 UTC` — 📜 **Hall of Fame:** 🔴 **Glitch** leads the world at Age 1440 with 25 glory.
 - `2026-07-11 22:30 UTC` — 🌪️ **World Event (Age 1440):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
@@ -138,7 +139,6 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-06-21 21:44 UTC` — 🕊️ **World Event (Age 1296):** Era of Peace — defense rolls +3 for this cycle.
 - `2026-06-20 15:50 UTC` — 🔥 **World Event (Age 1272):** Wildfire — jungle tiles in contested areas become neutral.
 - `2026-06-19 05:59 UTC` — 🔥 **World Event (Age 1248):** Wildfire — jungle tiles in contested areas become neutral.
-- `2026-06-17 17:19 UTC` — 🔥 **World Event (Age 1224):** Wildfire — jungle tiles in contested areas become neutral.
 
 ---
 
