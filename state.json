@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "world_age": 1607,
-  "last_updated": "2026-07-19T13:48:17.909277+00:00",
+  "world_age": 1608,
+  "last_updated": "2026-07-19T14:38:21.380137+00:00",
   "player_count": 1,
   "faction_count": 1,
   "factions": {
@@ -36,7 +36,7 @@
       "founded_age": 0,
       "dissolved": false,
       "alliances": [],
-      "last_territory_age": 1607
+      "last_territory_age": 1608
     }
   },
   "players": {
@@ -385,7 +385,6 @@
   "wonders": {},
   "alliances": {},
   "event_log": [
-    "`2026-05-29 07:38 UTC` \u2014 \u2744\ufe0f **World Event (Age 912):** Blizzard in the North \u2014 Norse biome tiles gain +2 defense.",
     "`2026-05-30 15:41 UTC` \u2014 \ud83c\udf0b **World Event (Age 936):** Eruption \u2014 volcano tiles deal -2 to any attacker this cycle.",
     "`2026-05-31 20:37 UTC` \u2014 \ud83c\udf0d **World Event (Age 960):** Migration wave \u2014 all factions gain 1 free territory claim adjacent to their border.",
     "`2026-06-02 15:40 UTC` \u2014 \ud83d\udd4a\ufe0f **World Event (Age 984):** Era of Peace \u2014 defense rolls +3 for this cycle.",
@@ -414,7 +413,8 @@
     "`2026-07-15 07:54 UTC` \u2014 \u2694\ufe0f **World Event (Age 1512):** Age of War \u2014 all attack rolls +2 for this cycle.",
     "`2026-07-16 09:55 UTC` \u2014 \ud83c\udf0b **World Event (Age 1536):** Eruption \u2014 volcano tiles deal -2 to any attacker this cycle.",
     "`2026-07-17 11:43 UTC` \u2014 \ud83d\udd4a\ufe0f **World Event (Age 1560):** Era of Peace \u2014 defense rolls +3 for this cycle.",
-    "`2026-07-18 12:33 UTC` \u2014 \ud83c\udffa **World Event (Age 1584):** Ancient relics unearthed \u2014 ruins and lost city tiles grant double score."
+    "`2026-07-18 12:33 UTC` \u2014 \ud83c\udffa **World Event (Age 1584):** Ancient relics unearthed \u2014 ruins and lost city tiles grant double score.",
+    "`2026-07-19 14:38 UTC` \u2014 \ud83c\udf0d **World Event (Age 1608):** Migration wave \u2014 all factions gain 1 free territory claim adjacent to their border."
   ],
   "hall_of_fame": [
     {
