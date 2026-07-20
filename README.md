@@ -6,7 +6,7 @@
 
 **[🌐 Play on the interactive map →](https://nhadiq.github.io/merge-conflict/)**
 
-**1 warriors · 1 civilizations · 7×7 world · Age 1631 · 2026-07-20 17:54 UTC**
+**1 warriors · 1 civilizations · 7×7 world · Age 1632 · 2026-07-20 18:53 UTC**
 
 ---
 
@@ -26,11 +26,11 @@
 ```
 
 **Active Biomes**
-- ❄️🌊⛰️ **The Frozen North**
 - 🌾🛣️🏰 **The Eastern Steppes**
-- ⬜🌲⛰️ **The Ancient Heartland**
-- 🏜️🔺🌴 **The Ancient Nile**
 - 🌿🟫🌆 **The Southern Wilds**
+- ❄️🌊⛰️ **The Frozen North**
+- 🏜️🔺🌴 **The Ancient Nile**
+- ⬜🌲⛰️ **The Ancient Heartland**
 
 > The world expands automatically as more players join. New biomes, wonders, and territories unlock continuously.
 
@@ -69,7 +69,7 @@
 | 🏛️ Civilizations | 1 active |
 | 👥 Warriors | 1 |
 | ✨ Wonders | 0/1 discovered |
-| 🌐 World Age | 1631 |
+| 🌐 World Age | 1632 |
 
 ---
 
@@ -127,6 +127,7 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 
 ## 📜 Chronicles
 
+- `2026-07-20 18:53 UTC` — 🕊️ **World Event (Age 1632):** Era of Peace — defense rolls +3 for this cycle.
 - `2026-07-19 14:38 UTC` — 🌍 **World Event (Age 1608):** Migration wave — all factions gain 1 free territory claim adjacent to their border.
 - `2026-07-18 12:33 UTC` — 🏺 **World Event (Age 1584):** Ancient relics unearthed — ruins and lost city tiles grant double score.
 - `2026-07-17 11:43 UTC` — 🕊️ **World Event (Age 1560):** Era of Peace — defense rolls +3 for this cycle.
@@ -138,7 +139,6 @@ Factions can form alliances. Allied factions share morale bonuses and cannot att
 - `2026-07-11 22:30 UTC` — 🌪️ **World Event (Age 1440):** Sandstorm sweeps the desert — desert tiles grant +1 defense until next dawn.
 - `2026-07-10 20:44 UTC` — 🏺 **World Event (Age 1416):** Ancient relics unearthed — ruins and lost city tiles grant double score.
 - `2026-07-09 15:22 UTC` — 🔥 **World Event (Age 1392):** Wildfire — jungle tiles in contested areas become neutral.
-- `2026-07-08 09:59 UTC` — 🌊 **World Event (Age 1368):** The Nile floods — all river tiles produce double morale bonus.
 
 ---
 
